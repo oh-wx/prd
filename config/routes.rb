@@ -1,22 +1,17 @@
 OhwxDev::Application.routes.draw do
+  get "oh_wx/Home"
+  get "oh_wx/WxEvents"
+  get "oh_wx/Images"
+  get "oh_wx/L_O_W"
+  get "oh_wx/About"
+  get "oh_wx/References"
+
   resources :radars
-
-
   resources :wws
-
-
   resources :mesos
-
-
   resources :outlooks
-
-
   resources :models
-
-
   resources :pictures
-
-
   resources :events
 
 
