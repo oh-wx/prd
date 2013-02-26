@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  time: 2013-02-25 21:45:59
+  date: 2013-02-25
+  disc: MyText
+  torn: MyString
+  wind: MyString
+  hail: MyString
+  event_id: 1
+
+two:
+  time: 2013-02-25 21:45:59
+  date: 2013-02-25
+  disc: MyText
+  torn: MyString
+  wind: MyString
+  hail: MyString
+  event_id: 1

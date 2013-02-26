@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Time:</b>
+  <%= @outlook.time %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @outlook.date %>
+</p>
+
+<p>
+  <b>Disc:</b>
+  <%= @outlook.disc %>
+</p>
+
+<p>
+  <b>Torn:</b>
+  <%= @outlook.torn %>
+</p>
+
+<p>
+  <b>Wind:</b>
+  <%= @outlook.wind %>
+</p>
+
+<p>
+  <b>Hail:</b>
+  <%= @outlook.hail %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @outlook.event_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_outlook_path(@outlook) %> |
+<%= link_to 'Back', outlooks_path %>

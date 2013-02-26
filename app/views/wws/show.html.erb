@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Number:</b>
+  <%= @ww.number %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @ww.image %>
+</p>
+
+<p>
+  <b>Disc:</b>
+  <%= @ww.disc %>
+</p>
+
+<p>
+  <b>Event:</b>
+  <%= @ww.event_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ww_path(@ww) %> |
+<%= link_to 'Back', wws_path %>

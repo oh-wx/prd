@@ -1,4 +1,25 @@
 OhwxDev::Application.routes.draw do
+  resources :radars
+
+
+  resources :wws
+
+
+  resources :mesos
+
+
+  resources :outlooks
+
+
+  resources :models
+
+
+  resources :pictures
+
+
+  resources :events
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

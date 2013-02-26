@@ -1,0 +1,27 @@
+<h1>Listing radars</h1>
+
+<table>
+  <tr>
+    <th>Time</th>
+    <th>Image</th>
+    <th>Event</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @radars.each do |radar| %>
+  <tr>
+    <td><%= radar.time %></td>
+    <td><%= radar.image %></td>
+    <td><%= radar.event_id %></td>
+    <td><%= link_to 'Show', radar %></td>
+    <td><%= link_to 'Edit', edit_radar_path(radar) %></td>
+    <td><%= link_to 'Destroy', radar, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Radar', new_radar_path %>
