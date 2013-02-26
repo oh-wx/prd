@@ -2,10 +2,10 @@
 	background-color: #000;
 }
 body {
-	background-image: url('../images/lght_61712.png');
+	background-image: url('lght_61712.png');
 	background-repeat: no-repeat;
 	width: 1400px;
-	height: 1500px;
+	height: 1400px;
 	margin: 0 auto;
 }
 #bdy_wrapper {
@@ -73,6 +73,7 @@ header > section {
 	text-align: center;
 	text-decoration: none;
 	border-bottom: 3px #FFF solid;
+	background-color: rgba(121,121,121, 0);
 	
 }
 #linkbar nav ul li a:hover {
@@ -80,6 +81,7 @@ header > section {
 	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 	text-decoration: none;
 	border-bottom: 7px #ECAE3C solid;
+	background-color: rgba(121,121,121, 0);
 }
 
 /* ID */
@@ -94,14 +96,14 @@ header > section {
 	height: 100px;
 	position: absolute;
 	left: 0px;
-	top: -70px;
+	top: -30px;/*-70px;*/
 	
 }
 #OhWx {
 	width: 800px;
 	height: 60px;
 	position: absolute;
-	top: -20px;
+	top: 0px;
 	left: 300px;
 }
 #linkbar {
