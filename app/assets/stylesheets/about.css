@@ -1,0 +1,19 @@
+﻿#wrapper {
+	width: 1400px;
+	height: auto;
+	
+	position: relative;
+	top: 150px;
+}
+
+#abt_me {
+	float: left;
+	width: 500px;
+	background-color: rgba(121,121,121, 0.2);
+}
+
+#abt_ohwx {
+	float: right;
+	width: 880px;
+	background-color: rgba(121,121,121, 0.2);
+}

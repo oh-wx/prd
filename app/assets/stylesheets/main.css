@@ -1,0 +1,120 @@
+﻿html {
+	background-color: #000;
+}
+body {
+	background-image: url('../images/bg/lght_61712.png');
+	background-repeat: no-repeat;
+	width: 1400px;
+	height: 1500px;
+	margin: 0 auto;
+}
+#bdy_wrapper {
+	position: relative;
+	top: 150px;
+	width: 1400px;
+	height: auto;
+}
+#stub {
+	width: 380px;
+	height: 500px;
+	float: left;
+	border: 1px #FFF solid;
+	
+	margin-right: 2px;
+}
+
+/*** Title Bar ***/
+/* Tag */
+header {
+	width: 1400px;
+	height: 100px;
+	background-color: rgba(121,121,121, .2);
+	margin: 0 auto;
+	position: relative;
+}
+header > section {
+	color: #FFF;
+}
+#OHWX > h1 {
+	font-size: 75px;
+	text-align: left;
+	font-family: Arial Black;
+	font-weight: bold;
+	font-style: italic;
+}
+#OhWx > h2{
+	text-align: center;
+	font-size: 45px;
+	font-family: "Courier New", Courier, monospace;
+	font-weight: bold;
+	font-style: normal;
+}
+#linkbar nav {
+	width: 800px;
+	margin: 0 auto;
+}
+#linkbar nav ul {
+	list-style: none;
+	width: 800px;
+	height: 30px;
+	margin: 7px auto;
+	padding-top: 3px;
+	border-top: 1px #ECAE3C solid;
+}
+#linkbar nav ul li {
+	display: inline;
+	margin: 0 30px;
+	width: 100px;
+}
+#linkbar nav ul li a {
+	color: #FFF;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	font-size: 17px;
+	text-align: center;
+	text-decoration: none;
+	border-bottom: 3px #FFF solid;
+	
+}
+#linkbar nav ul li a:hover {
+	color: #FFF;
+	font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+	text-decoration: none;
+	border-bottom: 7px #ECAE3C solid;
+}
+
+/* ID */
+/*#hdr_wrapper {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	height: 100px;
+}*/
+#OHWX {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	left: 0px;
+	top: -70px;
+	
+}
+#OhWx {
+	width: 800px;
+	height: 60px;
+	position: absolute;
+	top: -20px;
+	left: 300px;
+}
+#linkbar {
+	height: 40px;
+	width: 1000px;
+	position: absolute;
+	top: 65px;
+	left: 200px;
+}
+
+/* Class */
+.clear {
+	clear: both;
+}
+
+/*** Home Page Content ***/
