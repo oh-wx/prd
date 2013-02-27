@@ -1,6 +1,6 @@
-﻿var tabs = new Array("Domains", "Workflows", "Documents");
+﻿var tabs = new Array("Events", "Models", "Outlooks", "Mesos", "WWs", "Radar", "Info");
 /* store Tabs visited */
-var tabStack = new Array("Domains");
+var tabStack = new Array("Events");
 var tabIndex = 1;
 /* store Location of links clicked */
 var locStack = new Array();

@@ -1,4 +1,13 @@
 OhwxDev::Application.routes.draw do
+  
+  root :to => 'oh_wx#Home'
+  
+  match "/WxEvents" => 'oh_wx#WxEvents'
+  match "/Images" => 'oh_wx#Images'
+  match "/L_O_W" => 'oh_wx#L_O_W'
+  match "/About" => 'oh_wx#About'
+  match "/References" => 'oh_wx#References'
+  
   get "oh_wx/Home"
   get "oh_wx/WxEvents"
   get "oh_wx/Images"
@@ -14,6 +23,7 @@ OhwxDev::Application.routes.draw do
   resources :pictures
   resources :events
 
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

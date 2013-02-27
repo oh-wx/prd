@@ -1,0 +1,251 @@
+/*** Variables ***/
+$txtColor: #FFF;
+$bgHeader: rgba(121,121,121, .2);
+$bgTabs: rgba(70,76,84,.7);  /*#464C54;*/
+$transparent: rgba(121,121,121, 0);
+$lnkColor: #ECAE3C;
+$tabColor: rgba(236,174,60,.7); /*#ECAE3C;*/
+$tabContent: rgba(121,121,121,.7); 
+$black: #000;
+
+
+
+html {
+	background-color: $black;
+}
+body {
+	background-image: url('lght_61712.png');
+	background-repeat: no-repeat;
+	width: 1400px;
+	height: 1400px;
+	margin: 0 auto;
+}
+#bdy_wrapper {
+	position: relative;
+	top: 150px;
+	width: 1400px;
+	height: auto;
+}
+#stub {
+	width: 390px;
+	/*height: 500px;*/
+	float: left;
+	background-color: $bgHeader;
+	
+	section {
+		width: 290px;
+		padding: 7px;
+		margin: 8px auto;
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+}
+.clear {
+	clear: both;
+}
+
+
+/*** Title Bar ***/
+header {
+	width: 1400px;
+	height: 100px;
+	background-color: $bgHeader;
+	margin: 0 auto;
+	position: relative;
+	
+	section { color: $txtColor; }
+}
+footer {
+	width: 1400px;
+	height: 100px;
+	background-color: $bgHeader;
+	position: absolute;
+	bottom: 0px;
+	
+	color: $txtColor;
+}
+
+#OHWX {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	left: 0px;
+	top: -30px;
+	
+	h1 {
+		font-size: 75px;
+		text-align: left;
+		font-family: Arial Black;
+		font-weight: bold;
+		font-style: italic;
+	}	
+}
+#OhWx {
+	width: 800px;
+	height: 60px;
+	position: absolute;
+	top: 0px;
+	left: 300px;
+	
+	h2{
+		text-align: center;
+		font-size: 45px;
+		font-family: "Courier New", Courier, monospace;
+		font-weight: bold;
+		font-style: normal;
+	}
+}
+#linkbar {
+	height: 40px;
+	width: 1000px;
+	position: absolute;
+	top: 65px;
+	left: 200px;
+	
+	nav {
+		width: 800px;
+		margin: 0 auto;
+		
+		ul {
+			list-style: none;
+			width: 800px;
+			height: 30px;
+			margin: 7px auto;
+			padding-top: 3px;
+			border-top: 1px solid $lnkColor;
+			
+			li {
+				text-align: center;
+				display: inline;
+				margin: 0 30px;
+				width: 100px;
+				
+				&:first-child { margin-left: 15px; }
+					
+				a {
+					color: $txtColor;
+					font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+					font-size: 17px;
+					text-align: center;
+					text-decoration: none;
+					border-bottom: 3px solid $txtColor;
+					background-color: $transparent;
+					
+					&:hover {
+						color: $txtColor;
+						font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+						text-decoration: none;
+						border-bottom: 7px solid $lnkColor;
+						background-color: $transparent;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*** Tabs ***/
+
+/* Only show Events by default */
+#Models_Content, #Outlooks_Content, #Mesos_Content, #WWs_Content, #Radar_Content, #Info_Content { display: none; }
+
+.tabbed_area 
+{
+    background-color: $bgHeader;
+    padding: 8px 0px;
+    width: 1005px;
+    float: right;
+}
+ul.tabs
+{
+    padding: 0px;
+    margin-top: 5px;
+    margin-bottom: 6px;
+    
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+	
+	li 
+	{
+		list-style: none;
+		display: inline;
+		
+		a 
+		{
+			background-color: $bgTabs;
+			color: $txtColor;
+			padding: 8px 14px;
+			text-decoration: none;
+			font-size: 15px;
+			font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+			font-weight: bold;
+			text-transform: uppercase;
+			
+			&:hover 
+			{
+				background-color: $tabColor;
+				border-color: $tabColor;
+			}
+		}
+		a.active
+		{
+			background-color: $tabContent;
+			color: $lnkColor;
+		}
+	}
+}
+
+.content
+{
+    background-color: $tabContent;
+    padding: 7px;
+    border-radius: 10px;
+    -mo-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    height: auto;
+    width: 900px;
+    
+    color: $txtColor;
+    margin: 0px auto;
+	
+	ul
+	{
+		margin: 0px;
+		padding: 0 20px;
+		
+		li 
+		{
+			list-style: none;
+			border-bottom: 1px #D6DDE0 solid;
+			padding: 15px 0;
+			font-size: 13px;
+			
+			a
+			{
+				text-decoration: none;
+				color: #3E4346;
+				
+				small 
+				{
+					color: #8B959C;
+					font-size: 9px;
+					text-transform: uppercase;
+					font-family: Verdana, Arial, Helvetica, Sans-Serif;
+				}
+			}
+			
+			/* remove last border from ul */
+			&:last-child
+			{
+				border-bottom: none;
+			}
+		}
+	}
+}
