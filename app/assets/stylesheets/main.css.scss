@@ -48,6 +48,11 @@ body {
 .clear {
 	clear: both;
 }
+.see {
+	background-color: $transparent;
+	color: $lnkColor;
+}
+
 
 
 /*** Title Bar ***/
@@ -215,6 +220,33 @@ ul.tabs
     color: $txtColor;
     margin: 0px auto;
 	
+	h2 {
+		border-bottom: 2px solid $lnkColor;
+		display: inline;
+	}
+	
+	a.lnkText {
+		background-color: $transparent;
+		color: $txtColor;
+		text-decoration: none;
+	}
+	
+	a.return {
+		background-color: $transparent;
+		color: $lnkColor;
+		text-decoration: none;
+		font-size: 10px;
+		
+		width: 100px;
+		margin: 0 auto;
+	}
+	
+	a:hover {
+			color: $lnkColor;
+			background-color: $transparent;
+			text-decoration: none;
+	}
+	
 	ul
 	{
 		margin: 0px;
@@ -230,11 +262,11 @@ ul.tabs
 			a
 			{
 				text-decoration: none;
-				color: #3E4346;
+				color: $txtColor;/*#3E4346;*/
 				
 				small 
 				{
-					color: #8B959C;
+					color: $txtColor;/*#8B959C;*/
 					font-size: 9px;
 					text-transform: uppercase;
 					font-family: Verdana, Arial, Helvetica, Sans-Serif;

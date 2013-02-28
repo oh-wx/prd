@@ -22,9 +22,9 @@ function tab_select(selected_tab) {
     tabIndex++;
 }
 
-function link_to_tab(linked_tab, link_id, curr_id) {
+function goto_tab(linked_tab, link_id, curr_id) {
     /* add current location to Location stack */
-    loc_stack[locIndex] = "#" + curr_id;
+    locStack[locIndex] = "#" + curr_id;
     locIndex++;
 
     tab_select(linked_tab);

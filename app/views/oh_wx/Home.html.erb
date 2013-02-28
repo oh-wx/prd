@@ -19,7 +19,8 @@
 	
 	        <div id="Events_Content" class="content">
 	            <h2>Event</h2>
-	            <p>This is the Domains' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk1">links</a> 
+	            <p>This is the Domains' tab content.  This content can contain [<span class="see">see</span>
+				   <%= link_to_function "GFS", "goto_tab('Info', 'trmGFS', 'lnk1')", :id => "lnk1", :class => "lnkText" %>] 
 	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
 	               website, etc.</p>
 	        </div>
@@ -65,11 +66,7 @@
 	            </p>
 	        </div>
 			<div id="Info_Content" class="content">
-	            <h2>Info</h2>
-	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc.
-	            </p>
+	            <%= render 'layouts/info' %>
 	        </div>
 	    </div>
 </div>
