@@ -1,5 +1,6 @@
 class OhWxController < ApplicationController
   def Home
+	@event = Event.find(1)
   end
 
   def WxEvents

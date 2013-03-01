@@ -1,11 +1,11 @@
 /*** Variables ***/
 $txtColor: #FFF;
 $bgHeader: rgba(121,121,121, .2);
-$bgTabs: rgba(70,76,84,.7);  /*#464C54;*/
+$bgTabs: rgba(70,76,84,.7);  		/* default tab color #464C54;*/
 $transparent: rgba(121,121,121, 0);
 $lnkColor: #ECAE3C;
-$tabColor: rgba(236,174,60,.7); /*#ECAE3C;*/
-$tabContent: rgba(121,121,121,.7); 
+$tabColor: rgba(236,174,60,.7); 	/* hovered tab color #ECAE3C;*/
+$tabContent: rgba(121,121,121,.7); 	/* selected tab color and tabbed content bg */
 $black: #000;
 
 
