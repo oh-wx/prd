@@ -1,5 +1,8 @@
 <!-- Show Meso Disc -->
 
-<h2>Mesoscale Discussion #<%= @meso.number %>
-<img src="Events/2.27.13/<%= @meso.image %> alt="Meso Disc <%= @meso.number %>" />
+<h2>Mesoscale Discussion #<%= @meso.number %></h2>
+<br>
+<p>Image url: <%= @meso.image %></p>
+<br>
+<%= image_tag("Events/2.27.13/"+@meso.image, :alt => "Meso Disc #"+@meso.number) %>
 <p>Discussion: <%= @meso.disc %></p>
