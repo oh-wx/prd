@@ -20,10 +20,7 @@ OhwxDev::Application.routes.draw do
   resources :mesos
   resources :outlooks
   resources :models
-  resources :pictures
-  resources :events
-
-  
+  resources :pictures  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

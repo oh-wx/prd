@@ -11,19 +11,26 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130226025036) do
+ActiveRecord::Schema.define(:version => 20130302020647) do
+
+  create_table "discussions", :force => true do |t|
+    t.string   "url"
+    t.integer  "event_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "events", :force => true do |t|
-    t.date     "date"
-    t.text     "disc"
+    t.string   "date"
+    t.string   "disc"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "mesos", :force => true do |t|
-    t.integer  "number"
+    t.string   "number"
+    t.string   "disc"
     t.string   "image"
-    t.text     "disc"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -37,12 +44,12 @@ ActiveRecord::Schema.define(:version => 20130226025036) do
   end
 
   create_table "outlooks", :force => true do |t|
-    t.time     "time"
-    t.date     "date"
-    t.text     "disc"
+    t.string   "date"
+    t.string   "time"
+    t.string   "disc"
     t.string   "torn"
-    t.string   "wind"
     t.string   "hail"
+    t.string   "wind"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
@@ -56,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20130226025036) do
   end
 
   create_table "radars", :force => true do |t|
-    t.datetime "time"
+    t.string   "time"
     t.string   "image"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
@@ -64,9 +71,9 @@ ActiveRecord::Schema.define(:version => 20130226025036) do
   end
 
   create_table "wws", :force => true do |t|
-    t.integer  "number"
+    t.string   "number"
+    t.string   "disc"
     t.string   "image"
-    t.text     "disc"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false

@@ -1,3 +1,3 @@
-class Picture < ActiveRecord::Base
+class Discussion < ActiveRecord::Base
   attr_accessible :event_id, :url
 end
