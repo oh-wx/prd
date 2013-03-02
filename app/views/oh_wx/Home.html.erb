@@ -25,7 +25,7 @@
 	               website, etc.</p>
 				   
 				   
-				<%= render 'events/show' %>
+				<%= render 'layouts/events' %>
 	        </div>
 	        <div id="Models_Content" class="content">
 	            <h2>Model</h2>
@@ -41,18 +41,10 @@
 	            </ul>
 	        </div>
 	        <div id="Outlooks_Content" class="content">
-	            <h2>Outlook</h2>
-	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc.
-	            </p>
+	            <%= render 'layouts/outlooks' %>
 	        </div>
 			<div id="Mesos_Content" class="content">
-	            <h2>Meso Disc</h2>
-	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc.
-	            </p>
+	            <%= render 'layouts/mesos' %>
 	        </div>
 			<div id="WWs_Content" class="content">
 	            <h2>Watch/Warning</h2>
