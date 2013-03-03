@@ -45,6 +45,11 @@ body {
 		-webkit-border-radius: 10px;
 	}
 }
+#placeholder {
+	position: relative;
+	left: -63px;
+}
+
 .clear {
 	clear: both;
 }
@@ -69,12 +74,22 @@ footer {
 	width: 1400px;
 	height: 100px;
 	background-color: $bgHeader;
+	
 	position: absolute;
-	bottom: 0px;
+	top: 1400px;
 	
 	color: $txtColor;
+	
+	h4 {
+		display: inline;
+		background-color: $tabContent;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
 }
-
 #OHWX {
 	width: 400px;
 	height: 100px;
@@ -247,16 +262,41 @@ ul.tabs
 			text-decoration: none;
 	}
 	
+	ul#mdlSlideshow
+	{
+		margin: 0 auto;
+		margin-top: 8px;
+		padding: 0 20px;
+		width: 850px;
+		text-align: center;
+		
+		li 
+		{
+			list-style: none;
+			display: inline;
+			margin: 0 5px;
+			font-size: 13px;
+			
+			a
+			{
+				text-decoration: none;
+				color: $txtColor;/*#3E4346;*/
+				
+				&:hover {
+					text-decoration: none;
+					color: $lnkColor;
+				}
+			}
+		}
+	}
 	ul
 	{
-		margin: 0px;
+		margin: 0 auto;
 		padding: 0 20px;
 		
 		li 
 		{
 			list-style: none;
-			border-bottom: 1px #D6DDE0 solid;
-			padding: 15px 0;
 			font-size: 13px;
 			
 			a
@@ -272,7 +312,7 @@ ul.tabs
 					font-family: Verdana, Arial, Helvetica, Sans-Serif;
 				}
 			}
-			
+		
 			/* remove last border from ul */
 			&:last-child
 			{

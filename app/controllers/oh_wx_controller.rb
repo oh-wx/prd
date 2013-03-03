@@ -1,8 +1,12 @@
 class OhWxController < ApplicationController
   def Home
-	@event = Event.find(1)
-	@outlook = Outlook.find(1) #where(:event_id => "1")
-	@meso = Meso.find(1) #where(:event_id => "1")
+	@event = Event.find(3)				#.first
+	@models = @event.models
+	@outlooks = @event.outlooks #where(:event_id => "1")
+	@mesos = @event.mesos 		#where(:event_id => "1")
+	@wws = @event.wws
+	@radars = @event.radars
+	
 	
   end
 
@@ -10,6 +14,7 @@ class OhWxController < ApplicationController
   end
 
   def Images
+	@pictures = @event.Pictures
   end
 
   def L_O_W

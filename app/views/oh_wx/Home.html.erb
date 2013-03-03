@@ -17,28 +17,11 @@
 				<li><a href="javascript:tab_select('Info')" id="Info">Info</a></li>
 	        </ul>
 	
-	        <div id="Events_Content" class="content">
-	            <h2>Event</h2>
-	            <p>This is the Domains' tab content.  This content can contain [<span class="see">see</span>
-				   <%= link_to_function "GFS", "goto_tab('Info', 'trmGFS', 'lnk1')", :id => "lnk1", :class => "lnkText" %>] 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc.</p>
-				   
-				   
-				<%= render 'layouts/events' %>
+	        <div id="Events_Content" class="content">   
+				<%= render 'layouts/Events/3.05.13/discussion' %>
 	        </div>
 	        <div id="Models_Content" class="content">
-	            <h2>Model</h2>
-	            <p>This is the Workflows' tab content. This content can contain <a href="javascript:link_to_tab(...)" id="lnk2">links</a> 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc. Tab content may also contain lists:
-	            </p>
-	            <ul>
-	                <li><a id="2012">2012</a></li>
-	                <li><a id="2011">2011</a>&nbsp;<a href="javascript:return_from_tab()"><small>RETURN</small></a></li>
-	                <li><a id="2010">2010</a></li>
-	                <li><a id="2009">2009</a></li>
-	            </ul>
+	            <%=  render 'layouts/models' %>
 	        </div>
 	        <div id="Outlooks_Content" class="content">
 	            <%= render 'layouts/outlooks' %>

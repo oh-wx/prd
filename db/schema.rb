@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302020647) do
+ActiveRecord::Schema.define(:version => 20130302194039) do
 
   create_table "discussions", :force => true do |t|
     t.string   "url"
@@ -38,14 +38,21 @@ ActiveRecord::Schema.define(:version => 20130302020647) do
 
   create_table "models", :force => true do |t|
     t.string   "hour"
+    t.string   "type"
+    t.string   "init_time"
+    t.string   "init_date"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "outlooks", :force => true do |t|
-    t.string   "date"
-    t.string   "time"
+    t.string   "init_time"
+    t.string   "init_date"
+    t.string   "day"
+    t.string   "risk"
+    t.string   "cat"
+    t.string   "prob"
     t.string   "disc"
     t.string   "torn"
     t.string   "hail"
@@ -65,6 +72,8 @@ ActiveRecord::Schema.define(:version => 20130302020647) do
   create_table "radars", :force => true do |t|
     t.string   "time"
     t.string   "image"
+    t.string   "date"
+    t.string   "area"
     t.integer  "event_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
