@@ -19,6 +19,8 @@ body {
 	width: 1400px;
 	height: 1400px;
 	margin: 0 auto;
+	
+	min-height: 100%;
 }
 #bdy_wrapper {
 	position: relative;
@@ -45,10 +47,7 @@ body {
 		-webkit-border-radius: 10px;
 	}
 }
-#placeholder {
-	position: relative;
-	left: -63px;
-}
+
 
 .clear {
 	clear: both;
@@ -76,7 +75,7 @@ footer {
 	background-color: $bgHeader;
 	
 	position: absolute;
-	top: 1400px;
+	top: 2000px;
 	
 	color: $txtColor;
 	
@@ -240,6 +239,17 @@ ul.tabs
 		display: inline;
 	}
 	
+	figure {
+		width: 800px;
+		margin: 0 auto;
+		text-align: center;
+		
+		img {
+			width: 800px;
+			margin: 0 auto;
+		}
+	}
+	
 	a.lnkText {
 		background-color: $transparent;
 		color: $txtColor;
@@ -262,33 +272,6 @@ ul.tabs
 			text-decoration: none;
 	}
 	
-	ul#mdlSlideshow
-	{
-		margin: 0 auto;
-		margin-top: 8px;
-		padding: 0 20px;
-		width: 850px;
-		text-align: center;
-		
-		li 
-		{
-			list-style: none;
-			display: inline;
-			margin: 0 5px;
-			font-size: 13px;
-			
-			a
-			{
-				text-decoration: none;
-				color: $txtColor;/*#3E4346;*/
-				
-				&:hover {
-					text-decoration: none;
-					color: $lnkColor;
-				}
-			}
-		}
-	}
 	ul
 	{
 		margin: 0 auto;
@@ -321,3 +304,43 @@ ul.tabs
 		}
 	}
 }
+
+/*** Model Content ***/
+div#Models_Content {
+
+	h3 {
+		display: inline;
+	}
+	ul
+		{
+			/*margin: 0 auto;*/
+			margin-bottom: 8px;
+			padding: 0 20px;
+			/*width: 850px;*/
+			text-align: left;
+			
+			li 
+			{
+				list-style: none;
+				display: inline;
+				margin: 0 5px;
+				font-size: 13px;
+				
+				a
+				{
+					text-decoration: none;
+					color: $txtColor;/*#3E4346;*/
+					
+					&:hover {
+						text-decoration: none;
+						color: $lnkColor;
+					}
+				}
+			}
+		}
+	img#placeholder {
+		position: relative;
+		left: -63px;
+	}
+}
+
