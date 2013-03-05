@@ -1,5 +1,5 @@
 class Outlook < ActiveRecord::Base
-  attr_accessible :cat, :day, :disc, :event_id, :hail, :init_date, :init_time, :prob, :risk, :torn, :wind
+  attr_accessible :event_id, :risk
   
   belongs_to :event
 end

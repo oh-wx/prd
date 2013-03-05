@@ -11,79 +11,46 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130302194039) do
-
-  create_table "discussions", :force => true do |t|
-    t.string   "url"
-    t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20130305031244) do
 
   create_table "events", :force => true do |t|
     t.string   "date"
-    t.string   "disc"
+    t.string   "threat"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "mesos", :force => true do |t|
-    t.string   "number"
-    t.string   "disc"
-    t.string   "image"
     t.integer  "event_id"
+    t.string   "number"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "models", :force => true do |t|
-    t.string   "hour"
-    t.string   "type"
-    t.string   "init_time"
-    t.string   "init_date"
     t.integer  "event_id"
+    t.string   "agency"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "outlooks", :force => true do |t|
-    t.string   "init_time"
-    t.string   "init_date"
-    t.string   "day"
-    t.string   "risk"
-    t.string   "cat"
-    t.string   "prob"
-    t.string   "disc"
-    t.string   "torn"
-    t.string   "hail"
-    t.string   "wind"
     t.integer  "event_id"
+    t.string   "risk"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "pictures", :force => true do |t|
-    t.string   "url"
     t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "radars", :force => true do |t|
-    t.string   "time"
-    t.string   "image"
-    t.string   "date"
-    t.string   "area"
-    t.integer  "event_id"
+    t.string   "filename"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
   create_table "wws", :force => true do |t|
-    t.string   "number"
-    t.string   "disc"
-    t.string   "image"
     t.integer  "event_id"
+    t.string   "number"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

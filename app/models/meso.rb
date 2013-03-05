@@ -1,5 +1,5 @@
 class Meso < ActiveRecord::Base
-  attr_accessible :disc, :event_id, :image, :number
+  attr_accessible :event_id, :number
   
   belongs_to :event
 end

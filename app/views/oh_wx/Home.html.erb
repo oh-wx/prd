@@ -1,10 +1,68 @@
 
 <div id="bdy_wrapper">
 		<div id="stub">
-			<section>
-				<h2>Recent News</h2>
-				<p>This section can act more as a "blog" with or without database backing </p>
-			</section>
+		<div class="box">
+			<ul id="tabMenu">
+				<li class="posts selected"></li>
+				<li class="comments"></li>
+				<li class="category"></li>
+				<li class="famous"></li>
+				<li class="random"></li>
+			</ul>
+			<div class="boxTop"></div>
+			<div class="boxBody">
+				<div id="posts" class="show parent">
+					<h2>Posts</h2>
+					<p>Tab 1 - Posts</p>
+					<ul>
+						<li>Post 1</li>
+						<li>Post 2</li>
+						<li>Post 3</li>
+					</ul>
+				</div>
+				<div id="comments" class="parent">
+					<h2>Comments</h2>
+					<p>This is the Comments tab.  It can contain a list of elements as well as <a href="#">links</a> to other content.
+					   Return link/return tab logic has not been implemented for animated tabs...yet...</p>
+					<ul>
+						<li>Comment 1</li>
+						<li>Comment 2</li>
+						<li>Comment 3</li>
+					</ul>
+				</div>
+				<div id="category" class="parent">
+					<h2>Categories</h2>
+					<p>This is the Categories tab.  It can contain a list of elements as well as <a href="#">links</a> to other content.
+					   Return link/return tab logic has not been implemented for animated tabs...yet...</p>
+					<ul>
+						<li>Category 1</li>
+						<li>Category 2</li>
+						<li>Category 3</li>
+					</ul>  
+				</div>
+				<div id="famous" class="parent">
+					<h2>Famous Posts</h2>
+					<p>This is the Famous Posts tab.  It can contain a list of elements as well as <a href="#">links</a> to other content.
+					   Return link/return tab logic has not been implemented for animated tabs...yet...</p>
+					<ul>
+						<li>Famous Post 1</li>
+						<li>Famous Post 2</li>
+						<li>Famous Post 3</li>
+					</ul>
+				</div>
+				<div id="random" class="parent">
+					<h2>Random Posts</h2>
+					<p>This is the Random Posts tab.  It can contain a list of elements as well as <a href="#">links</a> to other content.
+					   Return link/return tab logic has not been implemented for animated tabs...yet...</p>
+					<ul>
+						<li>Random Post 1</li>
+						<li>Random Post 2</li>
+						<li>Random Post 3</li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
 		</div>
 		<div id="TabArea_bg" class="tabbed_area">
 	        <ul class="tabs">

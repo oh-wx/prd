@@ -1,5 +1,5 @@
 class Model < ActiveRecord::Base
-  attr_accessible :event_id, :hour, :init_date, :init_time, :type
+  attr_accessible :agency, :event_id
   
   belongs_to :event
 end
