@@ -62,22 +62,36 @@
 	        <ul class="tabs">
 	            <li><a href="javascript:tab_select('Events')" id="Events" class="active">Ensuing Systems</a></li>
 	            <li><a href="javascript:tab_select('Models')" id="Models">Models</a></li>
+				<% if @event.threat == "severe" %>
 	            <li><a href="javascript:tab_select('Outlooks')" id="Outlooks">Outlooks</a></li>
+				<% else %>
+				<li><a href="javascript:tab_select('Tracks')" id="Tracks">Surface Tracks</a></li>
+				<% end %>
 				<li><a href="javascript:tab_select('Mesos')" id="Mesos">Meso Discs</a></li>
+				<% if @event.threat == "severe" %>
 				<li><a href="javascript:tab_select('WWs')" id="WWs">Watches/Warnings</a></li>
-				<li><a href="javascript:tab_select('Radar')" id="Radar">Radar</a></li>
+				<% else %>
+				<li><a href="javascript:tab_select('')" id="">New Tab</a></li>
+				<% end %>
+				<li><a href="javascript:tab_select('Radar')" id="Radar">Free Tab</a></li>
 				<li><a href="javascript:tab_select('Info')" id="Info">Info</a></li>
 	        </ul>
 	
 	        <div id="Events_Content" class="content">   
-				<%= render 'layouts/Events/3.05.13/discussion' %>
+				<%= render "layouts/Events/"+@event.date+"/discussion" %>
 	        </div>
 	        <div id="Models_Content" class="content">
-	            <%=  render 'layouts/Events/3.05.13/models' %>
+	            <%=  render "layouts/Events/"+@event.date+"/models" %>
 	        </div>
+			<% if @event.threat == "severe" %>
 	        <div id="Outlooks_Content" class="content">
 	            <%= render 'layouts/outlooks' %>
 	        </div>
+			<% else %>
+			<div id="Tracks_Content" class="content">
+				<%= %>
+			</div>
+			<% end %>
 			<div id="Mesos_Content" class="content">
 	            <%= render 'layouts/mesos' %>
 	        </div>

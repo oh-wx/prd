@@ -1,6 +1,6 @@
 class OhWxController < ApplicationController
   def Home
-	#@event = Event.find(3)				#.first
+	@event = Event.first			#.first
 	#@models = @event.models
 	#@outlooks = @event.outlooks #where(:event_id => "1")
 	#@mesos = @event.mesos 		#where(:event_id => "1")

@@ -1,4 +1,4 @@
-﻿var tabs = new Array("Events", "Models", "Outlooks", "Mesos", "WWs", "Radar", "Info");
+﻿var tabs = new Array("Events", "Models", "Outlooks", "Tracks", "Mesos", "WWs", "Radar", "Info");
 /* store Tabs visited */
 var tabStack = new Array("Events");
 var tabIndex = 1;
@@ -9,13 +9,15 @@ var locIndex = 0;
 function tab_select(selected_tab) {
     /* hide all Tab content and reset Tabs */
     for (i = 0; i < tabs.length; i++) {
-        document.getElementById(tabs[i]).className = "";
-        document.getElementById(tabs[i] + "_Content").style.display = "none";
+		if (document.getElementById(tabs[i])) {
+			document.getElementById(tabs[i]).className = "";
+			document.getElementById(tabs[i] + "_Content").style.display = "none";
+		}
     }
 
     /* Display selected Tab content and style selected Tab */
-    document.getElementById(selected_tab).className = "active";
-    document.getElementById(selected_tab + "_Content").style.display = "block";
+	document.getElementById(selected_tab).className = "active";
+	document.getElementById(selected_tab + "_Content").style.display = "block";
 
     /* add selected Tab to Tabs visited */
     tabStack[tabIndex] = selected_tab;
