@@ -22,7 +22,8 @@ div.box > a:hover
 }
 #tabMenu
 {
-    margin: 0px;
+    width: 460px;
+	margin: 0px;
     padding: 0px 0px 0px 15px;
     list-style: none;
 	
@@ -69,14 +70,14 @@ li.mouseout { background-position: 0px -32px; }*/
 
 
 .box {
-	width: 330px;
+	width: 460px;
 	margin: 7px auto;
 }
 .boxTop { /* style for top of boxed content */ }
 .boxBody { 
 	background-color: $tabContent;	/*#282828; */
 	color: $txtColor;
-	
+	padding-top: 1px;
 	
 	border-radius: 10px;
 	-mo-border-radius: 10px;
@@ -87,10 +88,16 @@ li.mouseout { background-position: 0px -32px; }*/
 	div.show { display: block; }
 	
 	div {
-		ul, p, h2 {
+		a:hover {
+			color: $lnkColor;
+			background-color: $transparent;
+			text-decoration: none;
+		}
+		
+		ul, p, h2, h3, h4 {
 			margin: 7px;
 			padding: 0px;
-			width: 297px;
+			width: 437px;
 			list-style: none;
 		}
 		li
@@ -112,19 +119,13 @@ li.mouseout { background-position: 0px -32px; }*/
 		
 		img#rdrOH {
 			position: relative;
-			left: -26px;
-			width: 380px;
+			left: -11px;
+			width: 480px;
 		}	
 	}
 }
 .boxBottom { /* style for bottom of boxed content */ }
 
-/*.boxBody #category a { display: block; }*/
-
-/* IE operability */
-/*html .boxTop { margin-bottom: -2px; }
-*html .boxBody div ul 
-{
-    margin-left: 10px;
-    padding-left: 15px;
-}*/
+/*** Tutorials ***/
+.disp { display: block; }
+.hide { display: none; }

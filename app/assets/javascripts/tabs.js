@@ -24,22 +24,25 @@ function tab_select(selected_tab) {
     tabIndex++;
 }
 
-function goto_tab(linked_tab, link_id, curr_id) {
-    /* add current location to Location stack */
+function goto_tab(linked_tab, link_id/*, curr_id*/) {
+    /* add current location to Location stack 
     locStack[locIndex] = "#" + curr_id;
-    locIndex++;
+    locIndex++;*/
 
     tab_select(linked_tab);
     window.location.hash = "#" + link_id;
 }
 
 function return_from_tab() {
-    /* pop Tab/Tab content that was exited */
-    tab_select(tabStack[tabIndex - 2]);
+    if (tabStack.length < 2)
+		tab_select("Events");
+	else {
+		/* pop Tab/Tab content that was exited */
+		tab_select(tabStack[tabIndex - 2]);
+		tabIndex--;
+	}
 
-    /* pop location where link was clicked */
+    /* pop location where link was clicked 
     window.location.hash = locStack[locIndex - 1];
-
-    tabIndex--;
-    locIndex--;
+    locIndex--;*/
 }

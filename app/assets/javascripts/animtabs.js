@@ -1,6 +1,35 @@
+var tutorials = new Array("ttlModel", "ttlTemp1", "ttlTemp2");
+function tutorial_select(selected) {
+	for (i=0; i<tutorials.length; i++) {
+		if (document.getElementById(tutorials[i])) {
+			document.getElementById(tutorials[i]+"_Content").className = "hide";
+		}
+	}
+			
+	$("#ttlList").removeClass("disp");
+	$("#ttlList").addClass("hide");
+	
+	document.getElementById(selected+"_Content").className = "disp";
+}
+function showTtlList() {
+	for (i=0; i<tutorials.length; i++) {
+		if (document.getElementById(tutorials[i])) {
+			document.getElementById(tutorials[i]+"_Content").className = "hide";
+		}
+	}
+	
+	$("#ttlList").removeClass("hide");
+	$("#ttlList").addClass("disp");
+}
+
+
 $(document).ready(function () {
 			// get all listed items from the #tabMenu list
 			$("#tabMenu li").click(function () {
+			
+				// show tutorial list
+				showTtlList();
+			
 				// if listed item is not selected, perform following actions
 				if (!$(this).hasClass("selected")) {
 					// remove the .selected class from all listed items
@@ -33,13 +62,10 @@ $(document).ready(function () {
 				$(this).children().animate({ paddingLeft: "0px" }, { queue: false, duration: 300 });
 			});*/
 
-			// mouse-over effects for Post, Comments, Famous, and Random tab(s)
-			$(".boxBody li").click(function () {
-				// only change anchors in div.box
-				window.location = $(this).find("div.box > a").attr("href");
-			}).mouseover(function () {
+			// mouse-over effects for list items of tab(s)
+			$(".boxBody li").mouseover(function () {
 				// change background color
-				$(this).css("backgroundColor", "#888");
+				$(this).css("backgroundColor", "rgba(236,174,60,.7)"/*"#888"*/);
 			}).mouseout(function () {
 				// restore background color
 				$(this).css("backgroundColor", "");
