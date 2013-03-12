@@ -88,10 +88,16 @@ li.mouseout { background-position: 0px -32px; }*/
 	div.show { display: block; }
 	
 	div {
-		a:hover {
-			color: $lnkColor;
+		a {
+			color: $txtColor;
 			background-color: $transparent;
 			text-decoration: none;
+			
+			&:hover {
+				color: $lnkColor;
+				background-color: $transparent;
+				text-decoration: none;
+			}
 		}
 		
 		ul, p, h2, h3, h4 {

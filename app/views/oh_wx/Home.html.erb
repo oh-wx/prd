@@ -30,7 +30,7 @@
 						<p>First, a brief explanation on what a "model" is and how/when it is generated, or "run".  Models are computer algorithms developed by various meteorological institutions to lend guidance on upcoming weather systems.  These computer algorithms are provided input from radio-sondes and weather balloons that capture a plethora of data from the surface through the troposphere and into the stratosphere.  This data is collected twice a day and fed into the modeling algorithm at each of these times: 00Z and 12Z; "Z" is Zulu-time aka UTC or Greenwich mean-time (GMT), Eastern time is -4 hours during daylight savings and -5 hours otherwise.  The models are also run at 06Z and 18Z, but are not provided "true" atmospheric conditional data (i.e. no radio-sonde or weather balloon input). Note: some of the ensemble means run at 03Z, 09Z, 15Z, and 21Z.  Because each of these algorithms were developed by independent agencies or institutions, they each produce a unique output.  We look for convergence (or similarities) between multiple model outputs and consistencies between model runs to increase confidence in the actual outcome of the event.</p>
 						<p>Second, terminology and acronyms can be found under the "Info" tab, some will be linked to via [<span class="see">see </span><em>term</em>] so it doesn't seem like I'm speaking a foreign language.  The 
 						[<span class="see">see </span><%= link_to_function "GFS", "goto_tab('Info', 'trmGFS')", :class => "lnkText" %>] and 
-						[<span class="see">see </span><%= link_to_function "EURO", "goto_tab('Info', 'trmEURO')", :class => "lnkText" %>] are long-range models, meaning they have forecast hours up to 384hr and 240hr, respectively (the source I use <a href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> only offers the EURO up to 240hr).  The 
+						[<span class="see">see </span><%= link_to_function "EURO", "goto_tab('Info', 'trmEURO')", :class => "lnkText" %>] are long-range models, meaning they have forecast hours up to 384hr and 240hr, respectively (the source I use <a target="_blank" href="http://www.meteo.psu.edu/ewall/ewall.html"><u>PSU's Ewall</u></a> only offers the EURO up to 240hr).  The 
 						[<span class="see">see </span><%= link_to_function "CMC", "goto_tab('Info', 'trmCMC')", :class => "lnkText" %>] and 
 						[<span class="see">see </span><%= link_to_function "NAVY", "goto_tab('Info', 'trmNAVY')", :class => "lnkText" %>] are medium-long range, forecast hours up to 240hr and 180hr, respectively.  The 
 						[<span class="see">see </span><%= link_to_function "NAM", "goto_tab('Info', 'trmNAM')", :class => "lnkText" %>] and 
@@ -60,7 +60,7 @@
 						<h4>CMC and NAVY:</h4>
 						<p>All quandrants contain the same aspects as the GFS.</p>
 						<p>And that's the jist of it!  Hopefully you were able to follow along and now have a better understanding of the language used.  The SREF is a little more involved and has its own tutorial.  The RAP comes from a different source, along with other GFS and NAM runs that also have their own tutorial.</p>
-						<p>Last, but certainly not least, I would like to thank Penn State University for the public distribution of their models, you can find all the models from above (and many more!) at <a href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> as well as a much more in-depth tutorial located at the top-left of their website.</p>
+						<p>Last, but certainly not least, I would like to thank Penn State University for the public distribution of their models, you can find all the models from above (and many more!) at <a target="_blank" href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> as well as a much more in-depth tutorial located at the top-left of their website.</p>
 						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
 					</div>
 					<div id="ttlTemp1_Content">
@@ -110,7 +110,7 @@
 				<% if @event.threat == "severe" %>
 				<li><a href="javascript:tab_select('WWs')" id="WWs">Watches/Warnings</a></li>
 				<% else %>
-				<li><a href="javascript:tab_select('')" id="">New Tab</a></li>
+				<li><a href="javascript:tab_select('QPF')" id="QPF">QPF</a></li>
 				<% end %>
 				<li><a href="javascript:tab_select('Radar')" id="Radar">Free Tab</a></li>
 				<li><a href="javascript:tab_select('Info')" id="Info">Info</a></li>
@@ -124,16 +124,17 @@
 	        </div>
 			<% if @event.threat == "severe" %>
 	        <div id="Outlooks_Content" class="content">
-	            <%= render 'layouts/outlooks' %>
+	            <%= render "layouts/Events/"+@event.date+"/outlooks" %>
 	        </div>
 			<% else %>
 			<div id="Tracks_Content" class="content">
-				<%= %>
+				<%= render "layouts/Events/"+@event.date+"/tracks" %>
 			</div>
 			<% end %>
 			<div id="Mesos_Content" class="content">
-	            <%= render 'layouts/mesos' %>
+	            <%= render "layouts/Events/"+@event.date+"/mesos" %>
 	        </div>
+			<% if @event.threat == "severe" %>
 			<div id="WWs_Content" class="content">
 	            <h2>Watch/Warning</h2>
 	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
@@ -141,6 +142,11 @@
 	               website, etc.
 	            </p>
 	        </div>
+			<% else %>
+			<div id="QPF_Content" class="content">
+				<%= render "layouts/Events/"+@event.date+"/qpf" %>
+			</div>
+			<% end %>
 			<div id="Radar_Content" class="content">
 	            <h2>Radar</h2>
 	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
@@ -149,7 +155,7 @@
 	            </p>
 	        </div>
 			<div id="Info_Content" class="content">
-	            <%= render 'layouts/info' %>
+	            <%= render "layouts/info" %>
 	        </div>
 	    </div>
 </div>

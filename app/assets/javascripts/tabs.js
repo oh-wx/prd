@@ -1,4 +1,4 @@
-﻿var tabs = new Array("Events", "Models", "Outlooks", "Tracks", "Mesos", "WWs", "Radar", "Info");
+﻿var tabs = new Array("Events", "Models", "Outlooks", "Tracks", "Mesos", "WWs", "QPF", "Radar", "Info");
 /* store Tabs visited */
 var tabStack = new Array("Events");
 var tabIndex = 1;
@@ -34,8 +34,9 @@ function goto_tab(linked_tab, link_id/*, curr_id*/) {
 }
 
 function return_from_tab() {
-    if (tabStack.length < 2)
+    if (tabStack.length < 2) {
 		tab_select("Events");
+	}
 	else {
 		/* pop Tab/Tab content that was exited */
 		tab_select(tabStack[tabIndex - 2]);
