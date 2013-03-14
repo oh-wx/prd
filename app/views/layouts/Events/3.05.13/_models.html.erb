@@ -1,6 +1,18 @@
 <!-- Model runs for Event - 3.05.13 -->
 
 <h2>Model Runs</h2>
+
+	<table>
+		<tr>
+			<% if @models.empty? %>
+				<td>There are no Models for this event at this time.</td>
+			<% else %>
+				<% @models.each do |mdl| %>
+					<td><%= mdl.agency %></td>
+				<% end %>
+			<% end %>
+		</tr>
+	</table>
 <br>
 <br>
 	<h3>12Z GFS - 3.02.13</h3>

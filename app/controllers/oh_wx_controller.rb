@@ -1,16 +1,15 @@
 class OhWxController < ApplicationController
   def Home
 	@event = Event.last			#.first
-	#@models = @event.models
-	#@outlooks = @event.outlooks #where(:event_id => "1")
-	#@mesos = @event.mesos 		#where(:event_id => "1")
-	#@wws = @event.wws
-	#@radars = @event.radars
-	
-	
+	@models = @event.models
+	@outlooks = @event.outlooks
+
   end
 
   def WxEvents
+	@event = Event.last			#.first
+	@models = @event.models
+	@outlooks = @event.outlooks
   end
 
   def Images
