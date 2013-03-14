@@ -326,10 +326,12 @@ div#Models_Content {
 				{
 					text-decoration: none;
 					color: $txtColor;/*#3E4346;*/
+					background-color: $transparent;
 					
 					&:hover {
 						text-decoration: none;
 						color: $lnkColor;
+						background-color: $transparent;
 					}
 				}
 			}
