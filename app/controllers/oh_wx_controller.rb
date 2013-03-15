@@ -13,7 +13,8 @@ class OhWxController < ApplicationController
   end
 
   def Images
-	@pictures = @event.Pictures
+	@event = Event.last			#.first
+	@pictures = @event.pictures
   end
 
   def L_O_W
