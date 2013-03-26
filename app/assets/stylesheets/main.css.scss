@@ -79,7 +79,7 @@ header {
 	margin: 0 auto;
 	position: relative;
 	
-	section { color: $txtColor; }
+	/*section { color: $txtColor; }*/
 }
 footer {
 	width: 1400px;
@@ -108,6 +108,8 @@ footer {
 	left: 0px;
 	top: -30px;
 	
+	color: $lnkColor;
+	
 	h1 {
 		font-size: 75px;
 		text-align: left;
@@ -123,6 +125,8 @@ footer {
 	top: 0px;
 	left: 300px;
 	
+	color: $txtColor;
+	
 	h2{
 		text-align: center;
 		font-size: 45px;
@@ -137,6 +141,8 @@ footer {
 	position: absolute;
 	top: 65px;
 	left: 200px;
+	
+	color: $txtColor;
 	
 	nav {
 		width: 800px;
