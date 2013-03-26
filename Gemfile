@@ -30,7 +30,6 @@ group :production do
 	gem 'unicorn'
 end
 
-gem 'foreman'
 gem 'newrelic_rpm'
 
 
