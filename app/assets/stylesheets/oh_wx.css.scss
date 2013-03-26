@@ -1,0 +1,171 @@
+// Place all the styles related to the oh_wx controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$txtColor: #FFF;
+$bgHeader: rgba(121,121,121, .2);
+$bgTabs: rgba(70,76,84,.7);  /*#464C54;*/
+$transparent: rgba(121,121,121, 0);
+$lnkColor: #ECAE3C;
+$tabColor: rgba(236,174,60,.7); /*#ECAE3C;*/
+$tabContent: rgba(121,121,121,.7); 
+$black: #000;
+
+
+
+.wrapper {
+	width: 1400px;
+	height: auto;
+	position: relative;
+	top: 150px;
+	
+	section article a {
+		color: $txtColor;
+		background-color: $transparent;
+		text-decoration: none;
+		
+		&:hover {
+			color: $lnkColor;
+			background-color: $transparent;
+			text-decoration: none;
+		}
+	}
+}
+
+/*** About Page ***/
+#abt_me {
+	float: left;
+	width: 595px;
+	background-color: $bgHeader;
+	
+	article {
+		width: 495px;
+		margin: 8px auto;
+		padding: 7px;
+		
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+}
+
+#abt_ohwx {
+	float: right;
+	width: 800px;
+	background-color: $bgHeader;
+	
+	article {
+		width: 700px;
+		margin: 8px auto;
+		padding: 7px;
+		
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		
+	}
+}
+
+/*** Images Page ***/
+#IMGstub {
+	background-color: $bgHeader;
+	padding: 7px;
+	
+	article {
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+}
+
+/*** L.O.W. Page ***/
+#LOWstub {
+	background-color: $bgHeader;
+	padding: 7px;
+	
+	article {
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+}
+
+/*** References Page ***/
+#bookRefs {
+	width: 595px;
+	float: left;
+	background-color: $bgHeader;
+	
+	article {
+		width: 495px;
+		margin: 8px auto;
+		padding: 7px;
+		
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+#webRefs {
+	float: right;
+	width: 800px;
+	background-color: $bgHeader;
+	
+	article {
+		width: 700px;
+		margin: 8px auto;
+		padding: 7px;
+		
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+/*** Wx Events Page ***/
+#EVTstub {
+	background-color: $bgHeader;
+	padding: 7px;
+	
+	article {
+		background-color: $tabContent;
+		color: $txtColor;
+		
+		border-radius: 10px;
+		-mo-border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
+}

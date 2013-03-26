@@ -1,0 +1,38 @@
+<% provide(:subtitle, 'About') %>
+
+<div class="wrapper">
+		<section id="abt_me">
+			<article>
+				<h3>Background</h3>
+				<p>I have had an interest in weather, especially thunderstorms, since I can remember.  I have been fortunate to grow up in a geographic location prime for the observation of thunderstorms; on the southern ridge of the Miami Valley, facing West-Northwest.  As a child, I spent many spring and summer days watching thunderstorms roll across the Miami Valley from my neighbor's backyard (they had cleared the trees from their hill allowing for a beautiful view of the Dayton area and southern Miami Valley). </p>
+				<p>I attended the University of Cincinnati where I studied Astrophysics, and Wright State University where I am studying Computer Engineering.  I have also read multiple books on meteorology:  Severe Convective Storms (American Meteorology Society), Synoptic-Dynamic Meteorology in Midlatitudes Vol. 1 (Howard Bluestein), Mesoscale Meteorology in Midlatitudes (Paul Markowski and Yvette Richardson), and Extreme Weather (H. Michael Mogil).  The study of these fields, with an interest in meteorology, has provided me with an opportunity to better understand meteorological events and the means to provide information to the public via this web application.</p>
+				<p>I am a certified storm spotter with the National Weather Service (NWS) through their SkyWarn program, this allows me another method to provide information about hazardous weather via their network (both phone and amateur radio).  Currently, I am preparing for the Amateur Radio Relay League's (ARRL) technician and general class exams, which will give me the priviledge of relaying this information via their network, reaching local NWS Weather Forecast Offices (WFO) quicker.  The fundamental goal of this effort is to provide more accurate and timely warnings of severe weather before it impacts your area.</p>
+			</article>
+		
+		</section>
+		<section id="abt_ohwx">
+			<article>
+				<h3>Purpose</h3>
+				<p>The primary goal of this web application is to provide knowledge and warning of upcoming severe or winter weather events impacting the Ohio Valley (specifically IN, OH, KY).  The secondary goal of this application is to provide insight to the atmospheric setup conducive of these hazardous weather events and a better understanding of forecasts made by various meteorological agencies, including local media outlets.  Finally, some aspects of this application are intended for use as an event "log" where information about past events can be found (an image gallery will also be provided).</p>
+			</article>
+			<article>
+				<h3>Problem</h3>
+				<p>Two events during the severe weather season (roughly March-June) of 2011 ended in tragedy on a scale unseen in the last 50 or more years: 
+				[<span class="see">see </span><%= link_to "The Super-Outbreak" %>] of tornadoes across the deep south on April 27th; and 
+				[<span class="see">see </span><%= link_to "Joplin, MO EF-5" %>] tornado on May 22nd.  The question is "why?"  This question does not have a simple answer, but we can look at different aspects of each event and try to pin-point things that may have led to the high numbers of casualties.  Three general categories can be considered (forecasts and warnings are in the same category, though I've listed them separately to address each):</p>
+				<ul>
+					<li>severity of the event - </li>
+					<li>timing and accuracy of forecasts prior to the event - </li>
+					<li>timing and accuracy of warnings immediately before the event - </li>
+					<li>public awareness of forecasts and warnings - </li>
+				</ul>
+				<p>More needs to be done to increase public awareness of severe weather events and to communicate the likelihood events pose to destruction of property and loss of life; i.e. some days tornadoes are possible or even likely, when other days tornadoes are inevitable.  This web application is an attempt at that resolve.</p>
+			</article>
+			<article>
+				<h3>Scope</h3>
+				<p>The scope of this web application includes descriptions and explanations of upcoming severe or winter weather events.  Threat/Risk assessments for general areas, 20-50mi or more from a given location, will be provided before the onset of an event.  This web application <b>IS NOT</b> a forecasting resource in the traditional sense.  Forecasts <b>WILL NOT</b> be made for specific locations e.g. cities or even counties.  Interpolation of an assessment down to a county, city, or town <b>IS NOT</b> recomended and <b>I CANNOT</b> be held accountable for any action/response taken as a result.  
+				[<span class="see">See </span><%= link_to_function "disclaimer", "" %>] for more information.</p>
+			</article>
+		</section>
+	
+</div>
