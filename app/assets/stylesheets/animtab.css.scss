@@ -62,6 +62,7 @@ li.tutorial {
 	background-image: url("clipart/documentThumb.png");
 	background-repeat: no-repeat;
 }
+<<<<<<< HEAD
 li.anatomy { 
 	background-position: center;
 	background-color: $bgTabs;
@@ -69,6 +70,9 @@ li.anatomy {
 	background-repeat: no-repeat;
 	
 }
+=======
+li.famous { background-color: $bgTabs;	/*Green;*/ }
+>>>>>>> 76671cb7585826cad845317aee15374e3fbacfe2
 li.random { background-color: $bgTabs;	/*Fuchsia;*/ }
 
 /*li.mouseover { background-position: 0px 0px; }
