@@ -307,39 +307,56 @@ div#Models_Content {
 	h3 {
 		display: inline;
 	}
-	ul
-		{
-			/*margin: 0 auto;*/
-			margin-bottom: 8px;
-			padding: 0 20px;
-			/*width: 850px;*/
-			text-align: left;
-			
-			li 
-			{
-				list-style: none;
-				display: inline;
-				margin: 0 5px;
-				font-size: 13px;
-				
-				a
-				{
-					text-decoration: none;
-					color: $txtColor;/*#3E4346;*/
-					background-color: $transparent;
-					
-					&:hover {
-						text-decoration: none;
-						color: $lnkColor;
-						background-color: $transparent;
-					}
-				}
-			}
-		}
+
 	img#placeholder {
 		position: relative;
 		left: -50px;
 		width: 900px;
 	}
 }
-
+.disp { display: block; }
+.hide { display: none; }
+#ModelRuns { 
+	width: 700ps;
+	margin: 0 auto;
+	
+	thead {
+		text-align: center;
+	}
+	
+	tbody {
+		text-align: center;
+		margin-top: 15px;
+		
+		td ul {
+			list-style: none;
+			margin: auto;
+			
+			li {
+				display: inline;
+				margin: 0px 20px;
+			}
+		}
+	}
+}
+#ModelMenu {
+	th {
+		background-color: $transparent;
+		color: $txtColor;
+		border: 1px solid $txtColor;
+		width: 200px;
+	
+		&:hover {
+			background-color: $tabColor;
+			color: $bgTabs;
+			border 1px solid $tabColor;
+			width: 200px;
+		}
+	}
+	th.selected {
+		background-color: $tabContent;
+		color: $lnkColor;
+		border: 1px solid $tabContent;
+		width: 200px;
+	}
+}

@@ -20,4 +20,16 @@ function showPic(whichpic) {
  			} else {
   				return true;
  			}
-		}	
+		}
+
+$(document).ready(function() {
+	$("#ModelMenu th").click(function() {
+		$("tbody tr").addClass("hide);
+		$("#ModelMenu th").removeClass("selected");
+		
+		$(this).addClass("selected");
+		
+		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").removeClass("hide");
+		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").addClass("disp");
+	)};
+)};

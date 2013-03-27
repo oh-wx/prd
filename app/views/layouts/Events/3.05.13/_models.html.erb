@@ -2,13 +2,13 @@
 
 <h2>Model Runs</h2>
 
-	<table>
+	<table id="ModelRuns">
 		<% if @models.empty? %>
 		<caption>There are no Model Runs for this event at this time.</caption>
 		<% else %>
 		<thead>
 			<tr><th colspan="<%= @models.count %>">Model Runs</th></tr>
-			<tr id="#">
+			<tr id="ModelMenu">
 				<% @models.each do |mdl| %>
 				<th><%= mdl.agency %></th>
 				<% end %>
