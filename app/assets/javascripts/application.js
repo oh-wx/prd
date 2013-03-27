@@ -24,7 +24,7 @@ function showPic(whichpic) {
 
 $(document).ready(function() {
 	$("#ModelMenu th").click(function() {
-		$("tbody tr").addClass("hide);
+		$("tbody tr").addClass("hide");
 		$("#ModelMenu th").removeClass("selected");
 		
 		$(this).addClass("selected");

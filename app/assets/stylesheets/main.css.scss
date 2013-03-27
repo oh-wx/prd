@@ -314,8 +314,8 @@ div#Models_Content {
 		width: 900px;
 	}
 }
-.disp { display: block; }
-.hide { display: none; }
+/*.disp { display: block; }
+.hide { display: none; }*/
 #ModelRuns { 
 	width: 700ps;
 	margin: 0 auto;
@@ -335,6 +335,11 @@ div#Models_Content {
 			li {
 				display: inline;
 				margin: 0px 20px;
+				
+				a {
+					background-color: $transparent;
+					color: $txtColor;
+				}
 			}
 		}
 	}
@@ -349,7 +354,7 @@ div#Models_Content {
 		&:hover {
 			background-color: $tabColor;
 			color: $bgTabs;
-			border 1px solid $tabColor;
+			border: 1px solid $tabColor;
 			width: 200px;
 		}
 	}
