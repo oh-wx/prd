@@ -1,4 +1,4 @@
-var tutorials = new Array("ttlModel", "ttlTemp1", "ttlTemp2");
+/*var tutorials = new Array("ttlModel", "ttlTemp1", "ttlTemp2");
 function tutorial_select(selected) {
 	for (i=0; i<tutorials.length; i++) {
 		if (document.getElementById(tutorials[i])) {
@@ -10,26 +10,38 @@ function tutorial_select(selected) {
 	$("#ttlList").addClass("hide");
 	
 	document.getElementById(selected+"_Content").className = "disp";
-}
+}*/
 function showTtlList() {
-	for (i=0; i<tutorials.length; i++) {
-		if (document.getElementById(tutorials[i])) {
-			document.getElementById(tutorials[i]+"_Content").className = "hide";
-		}
-	}
-	
+	// hide tutorial content
+	$("#tutorial div").removeClass("disp");
+	$("#tutorial div").addClass("hide");
+	// show tutorial list
 	$("#ttlList").removeClass("hide");
 	$("#ttlList").addClass("disp");
+	// goto top of page
+	window.scrollTo(0,0);
+}
+function showAnaList() {
+	// hide anatomy content
+	$("#anatomy div").removeClass("disp");
+	$("#anatomy div").addClass("hide");
+	// show anatomy list
+	$("#anaList").removeClass("hide");
+	$("#anaList").addClass("disp");
+	// goto top of page
+	window.scrollTo(0,0);
 }
 
 
 $(document).ready(function () {
 			// get all listed items from the #tabMenu list
 			$("#tabMenu li").click(function () {
-			
+
 				// show tutorial list
 				showTtlList();
-			
+				// show anatomy list
+				showAnaList();
+
 				// if listed item is not selected, perform following actions
 				if (!$(this).hasClass("selected")) {
 					// remove the .selected class from all listed items
@@ -49,6 +61,34 @@ $(document).ready(function () {
 				// add and remove class
 				$(this).addClass("mouseout");
 				$(this).removeClass("mouseover");
+			});
+			
+			$("#ttlList ul li").click(function() {
+				// hide tutorial list
+				$("#ttlList").removeClass("disp");
+				$("#ttlList").addClass("hide");
+				
+				// hide unselected content
+				$("#tutorial div").removeClass("disp");
+				$("#tutorial div").addClass("hide");
+				
+				// display selected content
+				$("#tutorial div.hide:eq(" + $("#ttlList ul li").index(this) + ")").removeClass("hide");
+				$("#tutorial div.hide:eq(" + $("#ttlList ul li").index(this) + ")").addClass("disp");
+			});
+			
+			$("#anaList ul li").click(function() {
+				// hide anatomy list
+				$("#anaList").removeClass("disp");
+				$("#anaList").addClass("hide");
+				
+				// hide unselected content
+				$("#anatomy div").removeClass("disp");
+				$("#anatomy div").addClass("hide");
+				
+				// display selected content
+				$("#anatomy div.hide:eq(" + $("#anaList ul li").index(this) + ")").removeClass("hide");
+				$("#anatomy div.hide:eq(" + $("#anaList ul li").index(this) + ")").addClass("disp");
 			});
 
 			/* mouse-over effects with animation for Category tab
