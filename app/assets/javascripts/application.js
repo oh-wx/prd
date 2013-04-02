@@ -24,11 +24,15 @@ function showPic(whichpic) {
 
 $(document).ready(function() {
 	$("#ModelMenu th").click(function() {
+		// hide all model runs
+		$("tbody tr").removeClass("disp");
 		$("tbody tr").addClass("hide");
-		$("#ModelMenu th").removeClass("selected");
 		
+		// display selected model agency
+		$("#ModelMenu th").removeClass("selected");
 		$(this).addClass("selected");
 		
+		// display model runs for selected agency
 		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").removeClass("hide");
 		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").addClass("disp");
 	)};
