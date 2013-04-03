@@ -88,8 +88,22 @@
 					</nav>
 					<div class="hide">
 						<h3>Cold&nbsp;Season&nbsp;Lows</h3>
-						<p>Description of cold season Low pressure systems</p>
-						<img src="#" alt="temp img" />
+						<p>Cold Season Low pressure systems are fundamentally the same as their Warm Season counterparts.  Both are induced from Upper-Mid level troughs, usually found at 500mb; both exhibit cyclonic spin (counter-clockwise when viewed from above); and both are on the synoptic scale, covering 10,000's of square miles.  Where they differ is intuitive from their respective names: Cold Season Low's occur from December to February, but can occur in November/March or even October/April if the temperature's are cold enough.  Cold Season Low's cause Winter Storms and Blizzards.  The best way to illustrate the components of Cold Season Low's is with an example:</p>
+						<h4>February 1st, 2011</h4>
+						<p>A potent, negatively tilted [<span class="see">see </span><%= link_to_function "Negative Tilt", "goto_tab('Info', 'trmNegTilt')", :class => "lnkText" %>] 500mb trough induced a strong surface Low pressure system that caused a Blizzard across the Eastern Plains into Chicago, IL and an Ice/Winter Storm across the OH Valley.</p>
+						<figure>
+							<%= image_tag("Events/2.01.11/500mbWinds~23Z-US-2.01.11.png", :alt => "500mb Winds @ 23Z - 2.01.11") %>
+							<figcaption>500mb Winds @ 23Z - 2.01.11</figcaption>
+						</figure>
+						<p>Areas N of both the 850mb and Surface freezing line experienced heavy snow and Blizzard conditions, while areas S of the 850mb freezing line, but N of the Surface freezing line experienced heavy freezing rain and 0.5" of ice accumulation or more.</p>
+						<figure>
+							<figcaption>The <span class="blue">dashed blue line</span> in both images designates temperatures <span class="blue">below freezing</span> and the <span class="red">dashed red line</span> in both images designates temperatures <span class="red">above freezing</span>.</figcaption>
+							<%= image_tag("Events/2.01.11/850mbTemps~23Z-US-2.01.11.png", :alt => "850mb Temps @ 23Z - 2.01.11") %>
+							<figcaption>850mb Temps, Pressure, Wind, and Dew Pt @ 23Z - 2.01.11</figcaption>
+							<br>
+							<%= image_tag("Events/2.01.11/SfcTemps~23Z-US-2.01.11.png", :alt => "Surface Temps @ 23Z - 2.01.11") %>
+							<figcaption>Surface Temps, Pressure, and Wind @ 23Z - 2.01.11</figcaption>
+						</figure>
 						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">

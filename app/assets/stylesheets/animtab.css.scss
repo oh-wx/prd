@@ -133,7 +133,15 @@ li.mouseout { background-position: 0px -32px; }*/
 			position: relative;
 			left: -11px;
 			width: 480px;
-		}	
+		}
+
+		figure {
+			img {
+				position: relative;
+				left: -50px;
+				width: 480px;
+			}
+		}
 	}
 }
 .boxBottom { /* style for bottom of boxed content */ }
