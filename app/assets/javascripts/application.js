@@ -20,4 +20,20 @@ function showPic(whichpic) {
  			} else {
   				return true;
  			}
-		}	
+		}
+		
+$(document).ready(function() {
+	$("#ModelMenu th").click(function() {
+		// hide all model runs
+		$("#ModelRuns tbody tr").removeClass("disp");
+		$("#ModelRuns tbody tr").addClass("hide");
+		
+		// display selected model agency
+		$("#ModelMenu th").removeClass("selected");
+		$(this).addClass("selected");
+		
+		// display model runs for selected agency
+		$("#ModelRuns tbody tr.hide:eq(" + $("#ModelMenu th").index(this) + ")").removeClass("hide");
+		$("#ModelRuns tbody tr.hide:eq(" + $("#ModelMenu th").index(this) + ")").addClass("disp");
+	});
+});

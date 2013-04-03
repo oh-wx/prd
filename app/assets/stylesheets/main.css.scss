@@ -302,7 +302,7 @@ ul.tabs
 }
 
 /*** Model Content ***/
-div#Models_Content {
+#Models_Content {
 
 	h3 {
 		display: inline;
@@ -336,10 +336,56 @@ div#Models_Content {
 				}
 			}
 		}
-	img#placeholder {
+}
+#placeholder {
 		position: relative;
 		left: -50px;
 		width: 900px;
+}
+#ModelRuns {
+	margin: 0px auto;
+	width: 600px;
+	
+	
+}
+#ModelMenu {
+	
+	width: 600px;
+	font-size: 15px;
+	text-align: center;
+	
+	th {
+		margin: 0 auto;
+		width: 100px;
+		
+		border: 1px solid $bgTabs;
+		border-radius: 5px;
+		-mo-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color: $bgTabs;
+		
+		&:hover {
+			margin: 0 auto;
+			cursor: pointer;
+			
+			border: 1px solid $lnkColor;
+			border-radius: 5px;
+			-mo-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			background-color: $tabContent;
+			color: $lnkColor;
+		}
+	}
+	th.selected {
+		margin: 0 auto;
+	
+		border: 1px solid $tabColor;
+		border-radius: 5px;
+		-mo-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color: $tabColor;
 	}
 }
-
