@@ -35,14 +35,14 @@
 						[<span class="see">see </span><%= link_to_function "NAVY", "goto_tab('Info', 'trmNAVY')", :class => "lnkText" %>] are medium-long range, forecast hours up to 240hr and 180hr, respectively.  The 
 						[<span class="see">see </span><%= link_to_function "NAM", "goto_tab('Info', 'trmNAM')", :class => "lnkText" %>] and 
 						[<span class="see">see </span><%= link_to_function "SREF", "goto_tab('Info', 'trmSREF')", :class => "lnkText" %>] are short range, forecast hours up to 84hr and 87hr, respectively.  And finally, the 
-						[<span class="see">see </span><%= link_to_function "RAP", "goto_tab('Info', 'trmRAP')", :class => "lnkText" %>] is real-time, forecast hours up to 18hr (I only use the RAP <b>during</b> the event).<p>
+						[<span class="see">see </span><%= link_to_function "RAP", "goto_tab('Info', 'trmRAP')", :class => "lnkText" %>] is real-time, forecast hours up to 18hr (I only use the RAP <b>during</b> the event).</p>
 						<ul>
-							<li id="ttlModel" onclick="tutorial_select('ttlModel')">Model&nbsp;Interpretation</li>
-							<li id="ttlTemp1" onclick="tutorial_select('ttlTemp1')">Temp 1</li>
-							<li id="ttlTemp2" onclick="tutorial_select('ttlTemp2')">Temp 2</li>
+							<li>Model&nbsp;Interpretation</li>
+							<li>Temp 1</li>
+							<li>Temp 2</li>
 						</ul>
 					</nav>
-					<div id="ttlModel_Content">
+					<div class="hide">
 						<h3>Model&nbsp;Interpretation</h3>
 						<p>Hopefully you made it through the rather dry content and we can begin the fun; actually analyzing model output to make an educated guess of what we can expect from a given system, say, 5 days in advance (120hr) before they even mention it on the news!</p>
 						<p> Before continuing, you may want to open the "Models" tab for reference.  Each of the models is composed of four quadrants.  Each quadrant is output from the model about a different aspect of the atmosphere.  At the bottom of each quadrant are two lines of TEXT: the first begins with the model name (e.g. GFS), then the aspect of the atmosphere for that quadrant (e.g. 500mb VOR), followed by the week-day (abbreviated) date (yymmdd) time (ttttZ) and hour (hhh) of when the output is valid (e.g. THU 130228/0000V108; the "/" and "V" are just delimiters); the second line (is intuitive, but I will spell it out to avoid confusion) begins with "INITIAL TIME = " followed by the date (yymmdd) and time (ttttZ), the hour (hhh) is the number of hours after the initial time when the output is valid (e.g. INITIAL TIME = 130228/1200F108; again "/" and "F" are just delimiters, though I suspect "V" is for "valid" and "F" is for "forecast").</p>
@@ -63,25 +63,59 @@
 						<p>Last, but certainly not least, I would like to thank Penn State University for the public distribution of their models, you can find all the models from above (and many more!) at <a target="_blank" href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> as well as a much more in-depth tutorial located at the top-left of their website.</p>
 						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
 					</div>
-					<div id="ttlTemp1_Content">
+					<div class="hide">
 						<h3>Tutorial Stub 1</h3>
 						<p></p>
 						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
 					</div>
-					<div id="ttlTemp2_Content">
+					<div class="hide">
 						<h3>Tutorial Stub 2</h3>
 						<p></p>
 						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
 					</div>
 				</div>
 				<div id="anatomy" class="parent">
-					<h2>Anatomy&nbsp;of&nbsp;Wx&nbsp;Systems</h2>
-					<p>This is will need to implement the same scripting and display techniques as Tutorials</p>
-					<ul>
-						<li>Winter Storms</li>
-						<li>Severe Storms</li>
-						<li>Hurricanes(?)</li>
-					</ul>
+					<nav id="anaList" class="disp">
+						<h2>Anatomy&nbsp;of&nbsp;Wx&nbsp;Systems</h2>
+						<p>This is will need to implement the same scripting and display techniques as Tutorials</p>
+						<ul>
+							<li>Cold Season Lows</li>
+							<li>Warm Season Lows</li>
+							<li>Multicore Thunderstorms</li>
+							<li>Supercell Thunderstorms</li>
+							<li>Hurricanes</li>
+						</ul>
+					</nav>
+					<div class="hide">
+						<h3>Cold&nbsp;Season&nbsp;Lows</h3>
+						<p>Description of cold season Low pressure systems</p>
+						<img src="#" alt="temp img" />
+						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+					</div>
+					<div class="hide">
+						<h3>Warm&nbsp;Season&nbsp;Lows</h3>
+						<p>Description of warm season Low pressure systems</p>
+						<img src="#" alt="temp img" />
+						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+					</div>
+					<div class="hide">
+						<h3>Multicore&nbsp;Thunderstorms</h3>
+						<p>Description of multicore thunderstorms</p>
+						<img src="#" alt="temp img" />
+						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+					</div>
+					<div class="hide">
+						<h3>Supercell&nbsp;Thunderstorms</h3>
+						<p>Description of supercell thunderstorms</p>
+						<img src="#" alt="temp img" />
+						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+					</div>
+					<div class="hide">
+						<h3>Hurricanes</h3>
+						<p>Description of hurricanes</p>
+						<img src="#" alt="temp img" />
+						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+					</div>
 				</div>
 				<div id="random" class="parent">
 					<h2>Random Posts</h2>
@@ -98,20 +132,20 @@
 		</div><!-- end #stub -->
 		<div id="TabArea_bg" class="tabbed_area">
 	        <ul class="tabs">
-	            <li><a href="javascript:tab_select('Events')" id="Events" class="active">Ensuing Systems</a></li>
+	            <li><a href="javascript:tab_select('Events')" id="Events" class="active">Ensuing&nbsp;Systems</a></li>
 	            <li><a href="javascript:tab_select('Models')" id="Models">Models</a></li>
 				<% if @event.threat == "severe" %>
 	            <li><a href="javascript:tab_select('Outlooks')" id="Outlooks">Outlooks</a></li>
 				<% else %>
-				<li><a href="javascript:tab_select('Tracks')" id="Tracks">Low Tracks</a></li>
+				<li><a href="javascript:tab_select('Tracks')" id="Tracks">Low&nbsp;Tracks</a></li>
 				<% end %>
-				<li><a href="javascript:tab_select('Mesos')" id="Mesos">Meso Discs</a></li>
+				<li><a href="javascript:tab_select('Mesos')" id="Mesos">Meso&nbsp;Discs</a></li>
 				<% if @event.threat == "severe" %>
-				<li><a href="javascript:tab_select('WWs')" id="WWs">Watches/Warnings</a></li>
+				<li><a href="javascript:tab_select('Reports')" id="Reports">Storm&nbsp;Reports</a></li>
 				<% else %>
 				<li><a href="javascript:tab_select('QPF')" id="QPF">QPF</a></li>
 				<% end %>
-				<li><a href="javascript:tab_select('Radar')" id="Radar">Free Tab</a></li>
+				<li><a href="javascript:tab_select('WWs')" id="WWs">Watches/Warnings</a></li>
 				<li><a href="javascript:tab_select('Info')" id="Info">Info</a></li>
 	        </ul>
 	
@@ -134,16 +168,16 @@
 	            <%= render "layouts/Events/"+@event.date+"/mesos" %>
 	        </div>
 			<% if @event.threat == "severe" %>
-			<div id="WWs_Content" class="content">
-	            <%= render "layouts/Events/"+@event.date+"/wws" %>
+			<div id="Reports_Content" class="content">
+	            <%= render "layouts/Events/"+@event.date+"/reports" %>
 	        </div>
 			<% else %>
 			<div id="QPF_Content" class="content">
 				<%= render "layouts/Events/"+@event.date+"/qpf" %>
 			</div>
 			<% end %>
-			<div id="Radar_Content" class="content">
-	            <h2>Radar</h2>
+			<div id="WWs_Content" class="content">
+	            <h2>Watches/Warnings</h2>
 	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
 	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
 	               website, etc.

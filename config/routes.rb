@@ -16,13 +16,13 @@ OhwxDev::Application.routes.draw do
   get "oh_wx/References"
 
   resources :events
-  resources :radars
-  resources :wws
-  resources :mesos
+  #resources :radars
+  #resources :wws
+  #resources :mesos
   resources :outlooks
   resources :models
   resources :pictures
-  resources :discussions
+  #resources :discussions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

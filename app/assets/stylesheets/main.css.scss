@@ -183,7 +183,7 @@ footer {
 /*** Tabs ***/
 
 /* Only show Events by default */
-#Models_Content, #Outlooks_Content, #Tracks_Content, #Mesos_Content, #WWs_Content, #QPF_Content, #Radar_Content, #Info_Content { display: none; }
+#Models_Content, #Outlooks_Content, #Tracks_Content, #Mesos_Content, #Reports_Content, #QPF_Content, #WWs_Content, #Info_Content { display: none; }
 
 .tabbed_area 
 {
@@ -302,7 +302,7 @@ ul.tabs
 }
 
 /*** Model Content ***/
-div#Models_Content {
+#Models_Content {
 
 	h3 {
 		display: inline;
@@ -342,6 +342,7 @@ div#Models_Content {
 				}
 			}
 		}
+<<<<<<< HEAD
 	}
 }
 #ModelMenu {
@@ -365,3 +366,58 @@ div#Models_Content {
 		width: 200px;
 	}
 }
+=======
+}
+#placeholder {
+		position: relative;
+		left: -50px;
+		width: 900px;
+}
+#ModelRuns {
+	margin: 0px auto;
+	width: 600px;
+	
+	
+}
+#ModelMenu {
+	
+	width: 600px;
+	font-size: 15px;
+	text-align: center;
+	
+	th {
+		margin: 0 auto;
+		width: 100px;
+		
+		border: 1px solid $bgTabs;
+		border-radius: 5px;
+		-mo-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color: $bgTabs;
+		
+		&:hover {
+			margin: 0 auto;
+			cursor: pointer;
+			
+			border: 1px solid $lnkColor;
+			border-radius: 5px;
+			-mo-border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+			background-color: $tabContent;
+			color: $lnkColor;
+		}
+	}
+	th.selected {
+		margin: 0 auto;
+	
+		border: 1px solid $tabColor;
+		border-radius: 5px;
+		-mo-border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		background-color: $tabColor;
+	}
+}
+>>>>>>> b7d49b07aac97ddd3063b733096ad2cff333d44e
