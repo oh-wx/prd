@@ -21,35 +21,19 @@ function showPic(whichpic) {
   				return true;
  			}
 		}
-<<<<<<< HEAD
-
-$(document).ready(function() {
-	$("#ModelMenu th").click(function() {
-		// hide all model runs
-		$("tbody tr").removeClass("disp");
-		$("tbody tr").addClass("hide");
-=======
 		
 $(document).ready(function() {
 	$("#ModelMenu th").click(function() {
 		// hide all model runs
 		$("#ModelRuns tbody tr").removeClass("disp");
 		$("#ModelRuns tbody tr").addClass("hide");
->>>>>>> b7d49b07aac97ddd3063b733096ad2cff333d44e
 		
 		// display selected model agency
 		$("#ModelMenu th").removeClass("selected");
 		$(this).addClass("selected");
 		
 		// display model runs for selected agency
-<<<<<<< HEAD
-		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").removeClass("hide");
-		$("tbody tr.hide:eq(" + $("#ModelMenu > th").index(this) + ")").addClass("disp");
-	)};
-)};
-=======
 		$("#ModelRuns tbody tr.hide:eq(" + $("#ModelMenu th").index(this) + ")").removeClass("hide");
 		$("#ModelRuns tbody tr.hide:eq(" + $("#ModelMenu th").index(this) + ")").addClass("disp");
 	});
 });
->>>>>>> b7d49b07aac97ddd3063b733096ad2cff333d44e
