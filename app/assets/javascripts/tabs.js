@@ -1,4 +1,4 @@
-﻿var tabs = new Array("Events", "Models", "Outlooks", "Tracks", "Mesos", "WWs", "QPF", "Radar", "Info");
+﻿var tabs = new Array("Events", "Models", "Outlooks", "Tracks", "Mesos", "Reports", "QPF", "WWs", "Info");
 /* store Tabs visited */
 var tabStack = new Array("Events");
 var tabIndex = 1;

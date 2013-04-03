@@ -132,20 +132,20 @@
 		</div><!-- end #stub -->
 		<div id="TabArea_bg" class="tabbed_area">
 	        <ul class="tabs">
-	            <li><a href="javascript:tab_select('Events')" id="Events" class="active">Ensuing Systems</a></li>
+	            <li><a href="javascript:tab_select('Events')" id="Events" class="active">Ensuing&nbsp;Systems</a></li>
 	            <li><a href="javascript:tab_select('Models')" id="Models">Models</a></li>
 				<% if @event.threat == "severe" %>
 	            <li><a href="javascript:tab_select('Outlooks')" id="Outlooks">Outlooks</a></li>
 				<% else %>
-				<li><a href="javascript:tab_select('Tracks')" id="Tracks">Low Tracks</a></li>
+				<li><a href="javascript:tab_select('Tracks')" id="Tracks">Low&nbsp;Tracks</a></li>
 				<% end %>
-				<li><a href="javascript:tab_select('Mesos')" id="Mesos">Meso Discs</a></li>
+				<li><a href="javascript:tab_select('Mesos')" id="Mesos">Meso&nbsp;Discs</a></li>
 				<% if @event.threat == "severe" %>
-				<li><a href="javascript:tab_select('WWs')" id="WWs">Free Tab</a></li>
+				<li><a href="javascript:tab_select('Reports')" id="Reports">Storm&nbsp;Reports</a></li>
 				<% else %>
 				<li><a href="javascript:tab_select('QPF')" id="QPF">QPF</a></li>
 				<% end %>
-				<li><a href="javascript:tab_select('Radar')" id="Radar">Watches/Warnings</a></li>
+				<li><a href="javascript:tab_select('WWs')" id="WWs">Watches/Warnings</a></li>
 				<li><a href="javascript:tab_select('Info')" id="Info">Info</a></li>
 	        </ul>
 	
@@ -168,16 +168,16 @@
 	            <%= render "layouts/Events/"+@event.date+"/mesos" %>
 	        </div>
 			<% if @event.threat == "severe" %>
-			<div id="WWs_Content" class="content">
-	            <%= render "layouts/Events/"+@event.date+"/wws" %>
+			<div id="Reports_Content" class="content">
+	            <%= render "layouts/Events/"+@event.date+"/reports" %>
 	        </div>
 			<% else %>
 			<div id="QPF_Content" class="content">
 				<%= render "layouts/Events/"+@event.date+"/qpf" %>
 			</div>
 			<% end %>
-			<div id="Radar_Content" class="content">
-	            <h2>Radar</h2>
+			<div id="WWs_Content" class="content">
+	            <h2>Watches/Warnings</h2>
 	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
 	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
 	               website, etc.
