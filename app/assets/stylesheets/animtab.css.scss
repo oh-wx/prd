@@ -136,6 +136,13 @@ li.mouseout { background-position: 0px -32px; }*/
 		}
 
 		figure {
+			figcaption {
+				position: relative;
+				left: -50px;
+				width: 480px;
+				margin: 0 auto;
+				text-align: center;
+			}
 			img {
 				position: relative;
 				left: -50px;
@@ -149,3 +156,20 @@ li.mouseout { background-position: 0px -32px; }*/
 /*** Tutorials ***/
 .disp { display: block; }
 .hide { display: none; }
+
+/*** Anatomy ***/
+#CldLowImgs {
+	list-style: none;
+	text-align: center;
+	
+	li {
+		display: inline;
+		margin: 0 15px;
+		border-bottom: 1px #8E8E8E dotted;
+		background-color: $transparent;
+		
+		&:hover {
+			background-color: $transparent;
+		}
+	}
+}

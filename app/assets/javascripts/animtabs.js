@@ -32,6 +32,25 @@ function showAnaList() {
 	window.scrollTo(0,0);
 }
 
+function showAnaPic(whichpic, alttxt, caption, placeholder) {
+	if (document.getElementById) {
+		// show image and alternate text
+		document.getElementById(placeholder).src = whichpic.href;
+		document.getElementById(placeholder).alt = alttxt;
+		// hide all captions
+		$("#anatomy div figure figcaption").removeClass("disp");
+		$("#anatomy div figure figcaption").addClass("hide");
+		// display selected caption
+		$(caption).removeClass("hide");
+		$(caption).addClass("disp");
+		return false;
+	}
+	else {
+		return true;
+	}
+	
+		
+}
 
 $(document).ready(function () {
 			// get all listed items from the #tabMenu list

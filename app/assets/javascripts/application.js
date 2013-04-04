@@ -23,6 +23,8 @@ function showPic(whichpic) {
 		}
 		
 $(document).ready(function() {
+	window.scrollTo(0,0);
+	
 	$("#ModelMenu th").click(function() {
 		// hide all model runs
 		$("#ModelRuns tbody tr").removeClass("disp");
