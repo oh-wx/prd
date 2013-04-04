@@ -90,22 +90,25 @@
 						<h3>Cold&nbsp;Season&nbsp;Lows</h3>
 						<p>Cold Season Low pressure systems are fundamentally the same as their Warm Season counterparts.  Both are induced from Upper-Mid level troughs, usually found at 500mb; both exhibit cyclonic spin (counter-clockwise when viewed from above); and both are on the synoptic scale, covering 10,000's of square miles.  Where they differ is intuitive from their respective names: Cold Season Low's occur from December to February, but can occur in November/March or even October/April if the temperature's are cold enough.  Cold Season Low's cause Winter Storms and Blizzards.  The best way to illustrate the components of a Cold Season Low is with an example:</p>
 						<h4>February 1st, 2011</h4>
-						<p>A potent, negatively tilted [<span class="see">see </span><%= link_to_function "Negative Tilt", "goto_tab('Info', 'trmNegTilt')", :class => "lnkText" %>] 500mb trough induced a strong surface Low pressure system that caused a Blizzard across the Eastern Plains into Chicago, IL and an Ice/Winter Storm across the OH Valley.  Areas N of both the 850mb and Surface freezing line experienced heavy snow and Blizzard conditions, while areas S of the 850mb freezing line, but N of the Surface freezing line experienced heavy freezing rain and 0.5" of ice accumulation or more.  The <span class="blue">dashed blue line</span> in both the 850mb Temp and Surface Temp images designates temperatures <span class="blue">below freezing</span> and the <span class="red">dashed red line</span> in both images designates temperatures <span class="red">above freezing</span>.</p>
+						<p>A potent, negatively tilted [<span class="see">see </span><%= link_to_function "Negative Tilt", "goto_tab('Info', 'trmNegTilt')", :class => "lnkText" %>] 500mb trough induced a strong surface Low pressure system that caused a Blizzard across the Eastern Plains into Chicago, IL and an Ice/Winter Storm across the OH Valley.  Areas N of both the 850mb and Surface freezing line experienced heavy snow and Blizzard conditions, while areas S of the 850mb freezing line, but N of the Surface freezing line experienced heavy freezing rain and sleet resulting in 0.5" of ice accumulation or more (areas S of the Surface freezing line experienced all rain).  The <span class="blue">dashed blue line</span> in both the 850mb Temp and Surface Temp maps designates temperatures <span class="blue">below freezing</span> and the <span class="red">dashed red line</span> in both maps designates temperatures <span class="red">above freezing</span>.  This area of freezing rain and sleet is depicted on the Surface Radar map, between the <span class="red">red line</span> and <span class="black">black line</span>, areas of snow and rain are also shown.</p>
 						<ul id="CldLowImgs">
 							<li><%= link_to "500mb Winds", "assets/Anatomy/ColdLow/500mbWinds~23Z-US-2.01.11.png",
 								:onmouseover => "return showAnaPic(this, '500mb Winds @ 23Z - 2.01.11', '#CldCap1', 'CldLowPic')" %></li>
-							<li><%= link_to "850mb Temps", "assets/Anatomy/ColdLow/850mbTemps~23Z-US-2.01.11.png",
+							<li><%= link_to "850mb Temp", "assets/Anatomy/ColdLow/850mbTemps~23Z-US-2.01.11.png",
 								:onmouseover => "return showAnaPic(this, '850mb Temps @ 23Z - 2.01.11', '#CldCap2', 'CldLowPic')" %></li>
-							<li><%= link_to "Surface Temps", "assets/Anatomy/ColdLow/SfcTemps~23Z-US-2.01.11.png",
+							<li><%= link_to "Surface Temp", "assets/Anatomy/ColdLow/SfcTemps~23Z-US-2.01.11.png",
 								:onmouseover => "return showAnaPic(this, 'Surface Temps @ 23Z - 2.01.11', '#CldCap3', 'CldLowPic')" %></li>
+							<li><%= link_to "Surface Radar", "assets/Anatomy/ColdLow/SfcRdr~2310Z-US-2.01.11.png",
+								:onmouseover => "return showAnaPic(this, 'Surface Radar @ 2310Z - 2.01.11', '#CldCap4', 'CldLowPic')" %></li>
 						</ul>
 						<figure id="CldLowFig">
 							<img id="CldLowPic" src="assets/Anatomy/ColdLow/500mbWinds~23Z-US-2.01.11.png" alt="500mb Winds @ 23Z - 2.01.11" />
 							<figcaption id="CldCap1" class="disp">500mb Winds @ 23Z - 2.01.11</figcaption>
 							<figcaption id="CldCap2" class="hide">850mb Temps, Pressure, Wind, and Dew Pt @ 23Z - 2.01.11</figcaption>
 							<figcaption id="CldCap3" class="hide">Surface Temps, Pressure, and Wind @ 23Z - 2.01.11</figcaption>
+							<figcaption id="CldCap4" class="hide">Surface Radar and Freezing Line(s) @ 2310Z - 2.01.11</figcaption>
 						</figure>
-
+						<p>The February 1st Winter Storm/Blizzard was chosen as an example to illustrate the three regions of precipitation type typical of Cold Season Lows: snow; mixed precip (freezing rain/sleet); and rain.  Generally, such a large area of mixed precip is not common and sometimes may only be a few miles wide (<10mi).  Determining where the 850mb freezing line, 925mb freezing line (not shown), and surface freezing line will each set up is incredibly difficult and leads forecasters to issue percentages or ranges in snow accumulation totals, e.g. 40% chance of 5"+ or 4-6".</p>
 						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
