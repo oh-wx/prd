@@ -3,21 +3,19 @@
 		<div id="stub">
 		<div class="box">
 			<ul id="tabMenu">
-				<li class="localwx selected"></li>
+				<li class="blog selected"></li>
+				<li class="localwx"></li>
 				<li class="localrdr"></li>
 				<li class="tutorial"></li>
 				<li class="anatomy"></li>
-				<li class="random"></li>
 			</ul>
 			<div class="boxBody clear">
-				<div id="localwx" class="show parent">
+				<div id="blog" class="show parent">
+					<%= render "layouts/blog" %>
+				</div>
+				<div id="localwx" class="parent">
 					<h2>Local&nbsp;Wx</h2>
-					<p>Tab 1 - Posts</p>
-					<ul>
-						<li>Post 1</li>
-						<li>Post 2</li>
-						<li>Post 3</li>
-					</ul>
+					<p>Widget for Local Wx; implement GeoLocate for automatic location finding</p>
 				</div>
 				<div id="localrdr" class="parent">
 					<h2>Local&nbsp;Radar</h2>
@@ -136,16 +134,6 @@
 						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
 					</div>
 				</div>
-				<div id="random" class="parent">
-					<h2>Random Posts</h2>
-					<p>This is the Random Posts tab.  It can contain a list of elements as well as <a href="#">links</a> to other content.
-					   Return link/return tab logic has not been implemented for animated tabs...yet...</p>
-					<ul>
-						<li>Random Post 1</li>
-						<li>Random Post 2</li>
-						<li>Random Post 3</li>
-					</ul>
-				</div>
 			</div>
 		</div>
 		</div><!-- end #stub -->
@@ -196,11 +184,7 @@
 			</div>
 			<% end %>
 			<div id="WWs_Content" class="content">
-	            <h2>Watches/Warnings</h2>
-	            <p>This is the Documents' tab content.  This content can contain <a href="javascript:link_to_tab(...)" id="lnk3">links</a> 
-	               to different tabs and their respective content.  It can also contain third-party <a href="#">links</a> to any desired
-	               website, etc.
-	            </p>
+				<%= render "layouts/Events/"+@event.date+"/wws" %>
 	        </div>
 			<div id="Info_Content" class="content">
 	            <%= render "layouts/info" %>

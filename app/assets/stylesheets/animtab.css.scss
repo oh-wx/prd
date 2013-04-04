@@ -38,10 +38,15 @@ div.box > a:hover
 		
 		&:hover { background-color: $lnkColor; }
 	}
-	li.selected { background-color: $tabContent; }
+	li.selected { background-color: $lnkColor; }
 }
 
-
+li.blog {
+	background-position: center;
+	background-color: $bgTabs;	/*Fuchsia;*/ 
+	background-image: url("clipart/blogThumb.png");
+	background-repeat: no-repeat;
+}
 li.localwx {
 	background-position: center;
 	background-color: $bgTabs; /*Aqua;*/
@@ -69,7 +74,7 @@ li.anatomy {
 	background-repeat: no-repeat;
 	
 }
-li.random { background-color: $bgTabs;	/*Fuchsia;*/ }
+
 
 /*li.mouseover { background-position: 0px 0px; }
 li.mouseout { background-position: 0px -32px; }*/

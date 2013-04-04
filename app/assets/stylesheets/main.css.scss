@@ -259,7 +259,7 @@ ul.tabs
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     height: auto;
-    width: 800px;
+    width: 870px;
     
     color: $txtColor;
     margin: 0px auto;
@@ -357,14 +357,26 @@ ul.tabs
 }
 #placeholder {
 		position: relative;
-		left: -50px;
+		left: -14px;
 		width: 900px;
 }
 #ModelRuns {
 	margin: 0px auto;
 	width: 600px;
+
+	thead:first-child {
+		text-align: left;
+	}
 	
-	
+	ul {
+		width: 500px;
+		margin: 0 auto;
+		text-align: center;
+		
+		li {
+			margin: 0 7px;
+		}
+	}
 }
 #ModelMenu {
 	
@@ -373,8 +385,9 @@ ul.tabs
 	text-align: center;
 	
 	th {
-		margin: 0 auto;
 		width: 100px;
+		margin-right: 20px;
+		margin-left: 20px;
 		
 		border: 1px solid $bgTabs;
 		border-radius: 5px;
@@ -384,7 +397,7 @@ ul.tabs
 		background-color: $bgTabs;
 		
 		&:hover {
-			margin: 0 auto;
+			
 			cursor: pointer;
 			
 			border: 1px solid $lnkColor;
@@ -397,7 +410,7 @@ ul.tabs
 		}
 	}
 	th.selected {
-		margin: 0 auto;
+		
 	
 		border: 1px solid $tabColor;
 		border-radius: 5px;
