@@ -39,3 +39,4 @@ $(document).ready(function() {
 		$("#ModelRuns tbody tr.hide:eq(" + $("#ModelMenu th").index(this) + ")").addClass("disp");
 	});
 });
+

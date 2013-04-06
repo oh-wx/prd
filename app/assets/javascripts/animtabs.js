@@ -47,9 +47,7 @@ function showAnaPic(whichpic, alttxt, caption, placeholder) {
 	}
 	else {
 		return true;
-	}
-	
-		
+	}	
 }
 
 $(document).ready(function () {
