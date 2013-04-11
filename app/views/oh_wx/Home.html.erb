@@ -59,17 +59,17 @@
 						<p>All quandrants contain the same aspects as the GFS.</p>
 						<p>And that's the jist of it!  Hopefully you were able to follow along and now have a better understanding of the language used.  The SREF is a little more involved and has its own tutorial.  The RAP comes from a different source, along with other GFS and NAM runs that also have their own tutorial.</p>
 						<p>Last, but certainly not least, I would like to thank Penn State University for the public distribution of their models, you can find all the models from above (and many more!) at <a target="_blank" href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> as well as a much more in-depth tutorial located at the top-left of their website.</p>
-						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
+						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Tutorial Stub 1</h3>
 						<p></p>
-						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
+						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Tutorial Stub 2</h3>
 						<p></p>
-						<a href="javascript:showTtlList()"><small>Tutorial List</small></a>
+						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
 				</div>
 				<div id="anatomy" class="parent">
@@ -107,31 +107,31 @@
 							<figcaption id="CldCap4" class="hide">Surface Radar and Freezing Line(s) @ 2310Z - 2.01.11</figcaption>
 						</figure>
 						<p>The February 1st Winter Storm/Blizzard was chosen as an example to illustrate the three regions of precipitation type typical of Cold Season Lows: snow; mixed precip (freezing rain/sleet); and rain.  Generally, such a large area of mixed precip is not common and sometimes may only be a few miles wide (<10mi).  Determining where the 850mb freezing line, 925mb freezing line (not shown), and surface freezing line will each set up is incredibly difficult and leads forecasters to issue percentages or ranges in snow accumulation totals, e.g. 40% chance of 5"+ or 4-6".</p>
-						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Warm&nbsp;Season&nbsp;Lows</h3>
 						<p>Description of warm season Low pressure systems</p>
 						<img src="#" alt="temp img" />
-						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Multicore&nbsp;Thunderstorms</h3>
 						<p>Description of multicore thunderstorms</p>
 						<img src="#" alt="temp img" />
-						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Supercell&nbsp;Thunderstorms</h3>
 						<p>Description of supercell thunderstorms</p>
 						<img src="#" alt="temp img" />
-						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
 						<h3>Hurricanes</h3>
 						<p>Description of hurricanes</p>
 						<img src="#" alt="temp img" />
-						<a href="javascript:showAnaList()"><small>Anatomy List</small></a>
+						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 				</div>
 			</div>
@@ -158,6 +158,11 @@
 	
 	        <div id="Events_Content" class="content">   
 				<%= render "layouts/Events/"+@event.date+"/discussion" %>
+				<%= link_to "<<", :controller => "oh_wx", :action => "firstEvent" :class => "" %>
+				<%= link_to "prev", :controller => "oh_wx", :action => "prevEvent(@event.id)" :class => "" %>
+				<small> | </small>
+				<%= link_to "next", :controller => "oh_wx", :action => "nextEvent(@event.id)" :class => "" %>
+				<%= link_to ">>", :controller => "oh_wx", :action => "lastEvent" :class => "" %>
 	        </div>
 	        <div id="Models_Content" class="content">
 	            <%=  render "layouts/Events/"+@event.date+"/models" %>
