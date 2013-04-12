@@ -6,7 +6,7 @@ class OhWxController < ApplicationController
   end
 
   def nextEvent(current)
-		if (Event.find(current+1)?)
+		if (Event.find(current+1))
 			@event = Event.find(current+1)
 			@models = @event.models
 			@outlooks = @event.outlooks
@@ -18,7 +18,7 @@ class OhWxController < ApplicationController
 	end
 	
 	def prevEvent(current)
-		if (Event.find(current-1)?)
+		if (Event.find(current-1))
 			@event = Event.find(current-1)
 			@models = @event.models
 			@outlooks = @event.outlooks

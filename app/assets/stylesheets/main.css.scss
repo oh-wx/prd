@@ -45,6 +45,21 @@ body {
 	top: 150px;
 	width: 1400px;
 	height: auto;
+	
+	h1, h2, h3, h4, h5, h6 {
+		font-family: monospace;
+	}
+	h2 {
+		font-size: 23px;
+	}
+	h3 {
+		font-size: 17px;
+	}
+	h4 {
+		font-size: 15px;
+	}
+	
+	font-weight: bold;
 }
 #stub {
 	width: 490px;
@@ -104,8 +119,8 @@ footer {
 	height: 100px;
 	background-color: $bgHeader;
 	
-	position: absolute;
-	top: 2000px;
+	position: relative;/*absolute;*/
+	top: 400px;
 	
 	color: $txtColor;
 	

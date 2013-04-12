@@ -28,7 +28,7 @@
 						<p>First, a brief explanation on what a "model" is and how/when it is generated, or "run".  Models are computer algorithms developed by various meteorological institutions to lend guidance on upcoming weather systems.  These computer algorithms are provided input from radio-sondes and weather balloons that capture a plethora of data from the surface through the troposphere and into the stratosphere.  This data is collected twice a day and fed into the modeling algorithm at each of these times: 00Z and 12Z; "Z" is Zulu-time aka UTC or Greenwich mean-time (GMT), Eastern time is -4 hours during daylight savings and -5 hours otherwise.  The models are also run at 06Z and 18Z, but are not provided "true" atmospheric conditional data (i.e. no radio-sonde or weather balloon input). Note: some of the ensemble means run at 03Z, 09Z, 15Z, and 21Z.  Because each of these algorithms were developed by independent agencies or institutions, they each produce a unique output.  We look for convergence (or similarities) between multiple model outputs and consistencies between model runs to increase confidence in the actual outcome of the event.</p>
 						<p>Second, terminology and acronyms can be found under the "Info" tab, some will be linked to via [<span class="see">see </span><em>term</em>] so it doesn't seem like I'm speaking a foreign language.  The 
 						[<span class="see">see </span><%= link_to_function "GFS", "goto_tab('Info', 'trmGFS')", :class => "lnkText" %>] and 
-						[<span class="see">see </span><%= link_to_function "EURO", "goto_tab('Info', 'trmEURO')", :class => "lnkText" %>] are long-range models, meaning they have forecast hours up to 384hr and 240hr, respectively (the source I use <a target="_blank" href="http://www.meteo.psu.edu/ewall/ewall.html"><u>PSU's Ewall</u></a> only offers the EURO up to 240hr).  The 
+						[<span class="see">see </span><%= link_to_function "EURO", "goto_tab('Info', 'trmEURO')", :class => "lnkText" %>] are long-range models, meaning they have forecast hours up to 384hr and 240hr, respectively (the source I use, <a target="_blank" href="http://www.meteo.psu.edu/ewall/ewall.html"><u>PSU's Ewall</u></a>, only offers the EURO up to 240hr).  The 
 						[<span class="see">see </span><%= link_to_function "CMC", "goto_tab('Info', 'trmCMC')", :class => "lnkText" %>] and 
 						[<span class="see">see </span><%= link_to_function "NAVY", "goto_tab('Info', 'trmNAVY')", :class => "lnkText" %>] are medium-long range, forecast hours up to 240hr and 180hr, respectively.  The 
 						[<span class="see">see </span><%= link_to_function "NAM", "goto_tab('Info', 'trmNAM')", :class => "lnkText" %>] and 
@@ -41,33 +41,34 @@
 						</ul>
 					</nav>
 					<div class="hide">
-						<h3>Model&nbsp;Interpretation</h3>
+						<h2>Model&nbsp;Interpretation</h2>
 						<p>Hopefully you made it through the rather dry content and we can begin the fun; actually analyzing model output to make an educated guess of what we can expect from a given system, say, 5 days in advance (120hr) before they even mention it on the news!</p>
-						<p> Before continuing, you may want to open the "Models" tab for reference.  Each of the models is composed of four quadrants.  Each quadrant is output from the model about a different aspect of the atmosphere.  At the bottom of each quadrant are two lines of TEXT: the first begins with the model name (e.g. GFS), then the aspect of the atmosphere for that quadrant (e.g. 500mb VOR), followed by the week-day (abbreviated) date (yymmdd) time (ttttZ) and hour (hhh) of when the output is valid (e.g. THU 130228/0000V108; the "/" and "V" are just delimiters); the second line (is intuitive, but I will spell it out to avoid confusion) begins with "INITIAL TIME = " followed by the date (yymmdd) and time (ttttZ), the hour (hhh) is the number of hours after the initial time when the output is valid (e.g. INITIAL TIME = 130228/1200F108; again "/" and "F" are just delimiters, though I suspect "V" is for "valid" and "F" is for "forecast").</p>
-						<h4>GFS:</h4>
-						<p><b>Top-Left:</b> 500mb Vorticity, this is the amount of energy in the upper-mid atmosphere; deeper reds = higher vorticity -> higher vorticity = stronger surface Low (I should state that higher vorticity does not always lead to strong surface Low, but strong surface Low does require high vorticity).<br>
-						<b>Top-Right:</b> surface pressure, the center of the surface Low pressure system is designated by the red "L" more/tighter concentric circles (isobars, see www.oh-wx.com for more info) is a stronger Low pressure system.<br>
+						<p> Before continuing, you may want to open the "Models" tab for reference.  Each of the models are composed of four quadrants.  Each quadrant is output from the model about a different aspect of the atmosphere.  At the bottom of each quadrant are two lines of TEXT: the first begins with the model name (e.g. GFS), then the aspect of the atmosphere for that quadrant (e.g. 500mb VOR), followed by the week-day (abbreviated) date (yymmdd) time (ttttZ) and hour (hhh) of when the output is valid (e.g. THU 130228/0000V108; the "/" and "V" are just delimiters); the second line (is intuitive, but I will spell it out to avoid confusion) begins with "INITIAL TIME = " followed by the date (yymmdd) and time (ttttZ), the hour (hhh) is the number of hours after the initial time when the output is valid (e.g. INITIAL TIME = 130228/1200F108; again "/" and "F" are just delimiters, though I suspect "V" is for "valid" and "F" is for "forecast").</p>
+						<h3>GFS:</h3>
+						<p><b>Top-Left:</b> 500mb Vorticity, this is the amount of energy in the upper-mid atmosphere; deeper reds = higher vorticity, higher vorticity = stronger surface Low (I should state that higher vorticity does not always lead to strong surface Low, but a strong surface Low does require high vorticity).<br>
+						<b>Top-Right:</b> surface pressure, the center of the surface Low pressure system is designated by the red "L" more/tighter concentric circles 
+						[<span class="see">see </span><a href="javascript:go_to_tab('Info','trmIsobar')" class="lnkText">Isobars</a>] is a stronger Low pressure system.<br>
 						<b>Bottom-Left:</b> 700mb height and relative humidity, the scale at the bottom of the quadrant is the percentage of RH, the closer to 100 = the more likely precip is going to occur and reach the ground.<br>
 						<b>Bottom-Right:</b> if you just want a quick glance, and don't really care what's going on, this quadrant is the most important...it shows accumulated precip, in hundredths of an inch using the scale at the bottom, from the last 12hrs (i.e. total precip from the previous 12 hours up to the day/date/time indicated in the first line of TEXT at the bottom) and 850mb temperature (in *C e.g. 0*C is freezing and illustrated by the thick black line), <b>do not</b> confuse this with surface temperature, they are not equivalent.</p>
-						<h4>EURO:</h4>
+						<h3>EURO:</h3>
 						<p>The first three quadrants contain the same aspects as the GFS.<br>
 						<b>Bottom-Right:</b> unfortunately, the "quick-glance" method does not work as well here; this quadrant shows RH for 850mb (not accum precip, but you can use the same technique as 700mb RH; closer to 100 = precip is more likely), but it does show the 850mb temperature (0*C is the thick black line).</p>
-						<h4>NAM:</h4>
+						<h3>NAM:</h3>
 						<p>The first three quadrants contain the same aspects as the GFS.<br>
 						<b>Bottom-Right:</b> is almost the same as the GFS, but shows 6hr accumulated precip from the last 6hrs and uses a dashed red line to denote 0*C at 850mb.</p>
-						<h4>CMC and NAVY:</h4>
+						<h3>CMC and NAVY:</h3>
 						<p>All quandrants contain the same aspects as the GFS.</p>
 						<p>And that's the jist of it!  Hopefully you were able to follow along and now have a better understanding of the language used.  The SREF is a little more involved and has its own tutorial.  The RAP comes from a different source, along with other GFS and NAM runs that also have their own tutorial.</p>
 						<p>Last, but certainly not least, I would like to thank Penn State University for the public distribution of their models, you can find all the models from above (and many more!) at <a target="_blank" href="www.meteo.psu.edu/ewall/ewall.html" class="lnkText"><u>PSU's Ewall</u></a> as well as a much more in-depth tutorial located at the top-left of their website.</p>
 						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Tutorial Stub 1</h3>
+						<h2>Tutorial Stub 1</h2>
 						<p></p>
 						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Tutorial Stub 2</h3>
+						<h2>Tutorial Stub 2</h2>
 						<p></p>
 						<a href="javascript:showTtlList()" class="return"><small>Tutorial List</small></a>
 					</div>
@@ -85,9 +86,9 @@
 						</ul>
 					</nav>
 					<div class="hide">
-						<h3>Cold&nbsp;Season&nbsp;Lows</h3>
+						<h2>Cold&nbsp;Season&nbsp;Lows</h2>
 						<p>Cold Season Low pressure systems are fundamentally the same as their Warm Season counterparts.  Both are induced from Upper-Mid level troughs, usually found at 500mb; both exhibit cyclonic spin (counter-clockwise when viewed from above); and both are on the synoptic scale, covering 10,000's of square miles.  Where they differ is intuitive from their respective names: Cold Season Low's occur from December to February, but can occur in November/March or even October/April if the temperature's are cold enough.  Cold Season Low's cause Winter Storms and Blizzards.  The best way to illustrate the components of a Cold Season Low is with an example:</p>
-						<h4>February 1st, 2011</h4>
+						<h3>February 1st, 2011</h3>
 						<p>A potent, negatively tilted [<span class="see">see </span><%= link_to_function "Negative Tilt", "goto_tab('Info', 'trmNegTilt')", :class => "lnkText" %>] 500mb trough induced a strong surface Low pressure system that caused a Blizzard across the Eastern Plains into Chicago, IL and an Ice/Winter Storm across the OH Valley.  Areas N of both the 850mb and Surface freezing line experienced heavy snow and Blizzard conditions, while areas S of the 850mb freezing line, but N of the Surface freezing line experienced heavy freezing rain and sleet resulting in 0.5" of ice accumulation or more (areas S of the Surface freezing line experienced all rain).  The <span class="blue">dashed blue line</span> in both the 850mb Temp and Surface Temp maps designates temperatures <span class="blue">below freezing</span> and the <span class="red">dashed red line</span> in both maps designates temperatures <span class="red">above freezing</span>.  This area of freezing rain and sleet is depicted on the Surface Radar map, between the <span class="red">red line</span> and <span class="black">black line</span>, areas of snow and rain are also shown.</p>
 						<ul id="CldLowImgs">
 							<li><%= link_to "500mb Winds", "assets/Anatomy/ColdLow/500mbWinds~23Z-US-2.01.11.png",
@@ -110,25 +111,25 @@
 						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Warm&nbsp;Season&nbsp;Lows</h3>
+						<h2>Warm&nbsp;Season&nbsp;Lows</h2>
 						<p>Description of warm season Low pressure systems</p>
 						<img src="#" alt="temp img" />
 						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Multicore&nbsp;Thunderstorms</h3>
+						<h2>Multicore&nbsp;Thunderstorms</h2>
 						<p>Description of multicore thunderstorms</p>
 						<img src="#" alt="temp img" />
 						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Supercell&nbsp;Thunderstorms</h3>
+						<h2>Supercell&nbsp;Thunderstorms</h2>
 						<p>Description of supercell thunderstorms</p>
 						<img src="#" alt="temp img" />
 						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
 					</div>
 					<div class="hide">
-						<h3>Hurricanes</h3>
+						<h2>Hurricanes</h2>
 						<p>Description of hurricanes</p>
 						<img src="#" alt="temp img" />
 						<a href="javascript:showAnaList()" class="return"><small>Anatomy List</small></a>
@@ -158,11 +159,11 @@
 	
 	        <div id="Events_Content" class="content">   
 				<%= render "layouts/Events/"+@event.date+"/discussion" %>
-				<%= link_to "<<", :controller => "oh_wx", :action => "firstEvent" :class => "" %>
-				<%= link_to "prev", :controller => "oh_wx", :action => "prevEvent(@event.id)" :class => "" %>
+				<%= link_to_function "<<", :controller => "oh_wx", :action => "firstEvent", :class => "" %>
+				<%= link_to_function "prev", :controller => "oh_wx", :action => "prevEvent(@event.id)", :class => "" %>
 				<small> | </small>
-				<%= link_to "next", :controller => "oh_wx", :action => "nextEvent(@event.id)" :class => "" %>
-				<%= link_to ">>", :controller => "oh_wx", :action => "lastEvent" :class => "" %>
+				<%= link_to_function "next", :controller => "oh_wx", :action => "nextEvent(@event.id)", :class => "" %>
+				<%= link_to_function ">>", :controller => "oh_wx", :action => "lastEvent", :class => "" %>
 	        </div>
 	        <div id="Models_Content" class="content">
 	            <%=  render "layouts/Events/"+@event.date+"/models" %>
@@ -196,3 +197,4 @@
 	        </div>
 	    </div>
 </div>
+<%= render 'layouts/footer' %>
